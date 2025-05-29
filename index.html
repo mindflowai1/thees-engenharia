@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Thees Engenharia - Transformando Projetos em Realidade</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Fontes modernas e sem serifa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><span>Thees</span> Engenharia</a>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="desktop-menu">
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Botão Menu Mobile -->
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <div class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Menu Mobile (slide de cima) -->
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="logo">
+                        <a href="#"><span>Thees</span> Engenharia</a>
+                    </div>
+                    <button class="menu-close" aria-label="Fechar Menu">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mobile-menu-nav">
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-footer">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/theesengenharia/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5531994340753" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Overlay para fechar o menu -->
+        <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        
+        <div class="container">
+            <!-- Layout dividido -->
+            <div class="hero-split">
+                <!-- Lado Esquerdo (Texto) com animação de entrada lateral -->
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="hero-logo" data-aos="fade-down" data-aos-duration="800">
+                        <img src="assets/images/logo222.png" alt="Thees Engenharia Logo">
+                    </div>
+                    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        Transformamos <span class="highlight">projetos</span> em realidade com excelência.
+                    </h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        Obras civis, reformas e soluções sob medida com alto padrão técnico.
+                    </p>
+                    <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <a href="#contato" class="btn btn-primary cta-btn">
+                            Solicite seu orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Lado Direito (Imagem) com animação coordenada do contêiner e da imagem -->
+                <div class="hero-image container-animate">
+                    <div class="image-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Projeto arquitetônico exclusivo da Thees Engenharia" class="hero-animated-image mobile-animate">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre a Empresa -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+                <h2><span class="highlight-title">Sobre</span> a Thees Engenharia</h2>
+            </div>
+            <div class="about-content">
+                <!-- Lado Esquerdo (Texto) -->
+                <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
+                    <p class="lead-text">
+                        A Thees Engenharia atua com excelência no setor da construção civil, entregando obras residenciais, comerciais e institucionais com alto padrão técnico. Combinamos experiência, inovação e compromisso em cada etapa do projeto, garantindo segurança, durabilidade e satisfação para nossos clientes.
+                    </p>
+                    
+                    <div class="differential-list">
+                        <div class="differential-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="differential-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div class="differential-text">
+                                <h3>+10 anos de experiência</h3>
+                                <p>Tradição e solidez no mercado da construção civil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="differential-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="differential-icon">
+                                <i class="fas fa-hard-hat"></i>
+                            </div>
+                            <div class="differential-text">
+                                <h3>Equipe técnica especializada</h3>
+                                <p>Profissionais altamente qualificados e certificados</p>
+                            </div>
+                        </div>
+                        
+                        <div class="differential-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="differential-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="differential-text">
+                                <h3>Compromisso com prazos</h3>
+                                <p>Entregas pontuais e transparência em cada etapa</p>
+                            </div>
+                        </div>
+                        
+                        <div class="differential-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="differential-icon">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <div class="differential-text">
+                                <h3>Projetos personalizados</h3>
+                                <p>Soluções sob medida para cada necessidade</p>
+                            </div>
+                        </div>
+                        
+                        <div class="differential-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="differential-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="differential-text">
+                                <h3>Qualidade certificada</h3>
+                                <p>Normas técnicas rigorosas e materiais premium</p>
+                            </div>
+                        </div>
+                        
+                        <div class="differential-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="differential-icon">
+                                <i class="fas fa-leaf sustainability-icon"></i>
+                            </div>
+                            <div class="differential-text">
+                                <h3>Sustentabilidade</h3>
+                                <p>Práticas construtivas ecológicas e responsabilidade ambiental</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lado Direito (Imagem da CEO) -->
+                <div class="about-image" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="ceo-image-container">
+                        <img src="assets/images/Thees.jpg" alt="Fernanda Thees - CEO da Thees Engenharia" class="ceo-image">
+                        <div class="ceo-caption">
+                            <h3>Fernanda Thees</h3>
+                            <p>Fundadora e Diretora Executiva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Elementos decorativos de fundo -->
+        <div class="about-bg-elements">
+            <div class="bg-element element-1"></div>
+            <div class="bg-element element-2"></div>
+            <div class="bg-element element-3"></div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="services-section">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+                <h2><span class="highlight-title">O que</span> fazemos</h2>
+                <p class="section-subtitle">Soluções completas em engenharia, reformas e construção civil</p>
+            </div>
+            
+            <div class="services-grid" data-aos="fade-up">
+                <!-- Serviço 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Construção Civil</h3>
+                    <p>Execução completa de obras residenciais, comerciais e institucionais.</p>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Reformas e Retrofit</h3>
+                    <p>Renovação inteligente de ambientes com foco em funcionalidade e estética.</p>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Projetos Estruturais</h3>
+                    <p>Desenvolvimento técnico de estruturas com segurança e precisão.</p>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gerenciamento de Obras</h3>
+                    <p>Coordenação e supervisão profissional de todas as etapas da obra.</p>
+                </div>
+                
+                <!-- Serviço 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Consultoria Técnica</h3>
+                    <p>Análise e apoio técnico para viabilidade e planejamento de projetos.</p>
+                </div>
+                
+                <!-- Serviço 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Regularização e Laudos</h3>
+                    <p>Serviços para documentação técnica, laudos, ART e legalizações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos (Nova) -->
+    <section id="projetos" class="projects-section">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+                <h2><span class="highlight-title">Nossos</span> Projetos Exclusivos</h2>
+                <p class="section-subtitle">Transformação e excelência em cada detalhe, onde seus sonhos ganham forma</p>
+            </div>
+            
+            <div class="projects-container">
+                <!-- Projeto 1 -->
+                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Construa ou Reforme - Thees Engenharia">
+                    </div>
+                    <div class="project-content">
+                        <h3>Construa ou Reforme!</h3>
+                        <p>Contamos com especialistas em todas as áreas para seu projeto técnico completo.</p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-bolt"></i> Projetos Elétricos e Hidrossanitários</li>
+                            <li><i class="fas fa-network-wired"></i> Cabeamento Estruturado de Rede</li>
+                            <li><i class="fas fa-fire-extinguisher"></i> Sistemas de Prevenção de Incêndio</li>
+                            <li><i class="fas fa-temperature-low"></i> Gás e Climatização</li>
+                            <li><i class="fas fa-water"></i> Drenagem e Terraplenagem</li>
+                        </ul>
+                        <a href="https://www.instagram.com/reel/DJ9Gp2eOI7r/" class="btn-project-link" target="_blank">
+                            <i class="fab fa-instagram"></i> Ver no Instagram
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Casa dos Sonhos - Thees Engenharia">
+                    </div>
+                    <div class="project-content">
+                        <h3>Casa dos Sonhos!</h3>
+                        <p>Realizamos seu projeto residencial com excelência e dedicação.</p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-home"></i> Projetos residenciais de alto padrão</li>
+                            <li><i class="fas fa-ruler-combined"></i> Planejamento arquitetônico personalizado</li>
+                            <li><i class="fas fa-paint-roller"></i> Acabamentos premium e sofisticados</li>
+                            <li><i class="fas fa-leaf"></i> Soluções sustentáveis e eficientes</li>
+                            <li><i class="fas fa-clock"></i> Cumprimento rigoroso de prazos</li>
+                        </ul>
+                        <a href="https://www.instagram.com/reel/C7Ae17utTYv/" class="btn-project-link" target="_blank">
+                            <i class="fab fa-instagram"></i> Ver no Instagram
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="project-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Banheiro Luxuoso - Thees Engenharia">
+                    </div>
+                    <div class="project-content">
+                        <h3>Banheiro Luxuoso!</h3>
+                        <p>Transforme seu banheiro em um espaço de relaxamento e sofisticação.</p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-shower"></i> Duchas e chuveiros de alta pressão</li>
+                            <li><i class="fas fa-tint"></i> Metais e acabamentos premium</li>
+                            <li><i class="fas fa-square"></i> Revestimentos em porcelanato e mármore</li>
+                            <li><i class="fas fa-lightbulb"></i> Iluminação planejada e LED</li>
+                            <li><i class="fas fa-palette"></i> Design exclusivo e personalizado</li>
+                        </ul>
+                        <a href="https://www.instagram.com/reel/DHjyU2ESy8N/" class="btn-project-link" target="_blank">
+                            <i class="fab fa-instagram"></i> Ver no Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://www.instagram.com/theesengenharia" class="btn btn-primary cta-btn" style="border-radius: 30px;" target="_blank">
+                    <i class="fab fa-instagram"></i> Ver mais projetos no Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+                <h2><span class="highlight-title">O que</span> dizem sobre nós</h2>
+            </div>
+            
+            <div class="testimonials-container">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-item animate-pulseGlow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <span class="quote-mark">“</span>
+                        <p class="testimonial-text">Profissionalismo, clareza e entrega impecável. A equipe da Thees superou todas as expectativas.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p>Cliente Thees – Reforma Comercial</p>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="testimonial-item animate-pulseGlow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <span class="quote-mark">“</span>
+                        <p class="testimonial-text">O cuidado em cada detalhe e o cumprimento de prazos nos deram total confiança desde o início.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p>Cliente Thees – Obra Residencial</p>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="testimonial-item animate-pulseGlow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <span class="quote-mark">“</span>
+                        <p class="testimonial-text">Tivemos uma experiência extremamente positiva. Técnica e humanidade andam juntas na Thees Engenharia.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <p>Cliente Thees – Projeto Institucional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contact-section" style="background-image: url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+                <h2 style="color: #ffffff; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); padding: 10px 0 15px 0; margin-bottom: 0;">FALE COM A GENTE</h2>
+                <div style="border-top: 3px solid #ffffff; width: 100px; margin-bottom: 25px;"></div>
+            </div>
+            
+            <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome completo<span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Tipo de projeto<span class="required">*</span></label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="reforma">Reforma</option>
+                                <option value="construcao">Construção</option>
+                                <option value="projeto_estrutural">Projeto Estrutural</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="message">Mensagem<span class="required">*</span></label>
+                            <textarea id="message" name="message" placeholder="Descreva seu projeto ou dúvida" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Solicitar Contato</button>
+                    </form>
+                    
+                    <div class="form-success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Mensagem enviada com sucesso!</h3>
+                        <p>Em breve entraremos em contato com você.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo no rodapé com mesmo estilo do NavBar -->
+                <div class="footer-logo">
+                    <a href="#hero" class="logo-link" data-component-name="<a />"><span data-component-name="<span />">Thees</span> Engenharia</a>
+                </div>
+                <!-- Informações de contato e redes sociais -->
+                <div class="footer-contact">
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Belo Horizonte/MG - Savassi</p>
+                    <!-- Ícones de redes sociais -->
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/theesengenharia/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5531994340753" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 Thees Engenharia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50,
+            });
+            
+            // Adicionar efeito de parallax sutil à imagem hero
+            const heroImage = document.querySelector('.hero-image img');
+            if (heroImage) {
+                window.addEventListener('scroll', function() {
+                    const scrollY = window.scrollY;
+                    if (scrollY < 600) {
+                        heroImage.style.transform = `translateY(${scrollY * 0.05}px)`;
+                    }
+                });
+            }
+            
+            // Funcionalidade do formulário de contato
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.querySelector('.form-success-message');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simular envio do formulário (aqui você adicionaria sua lógica de envio real)
+                    setTimeout(function() {
+                        contactForm.style.opacity = '0';
+                        
+                        setTimeout(function() {
+                            contactForm.style.display = 'none';
+                            successMessage.classList.add('active');
+                        }, 300);
+                    }, 500);
+                });
+            }
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
