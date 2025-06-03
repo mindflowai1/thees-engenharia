@@ -1,0 +1,8 @@
+{
+  "name": "theesconstrutora-landingpage",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler pages deploy ."
+  }
+}

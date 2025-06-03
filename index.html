@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon1.png">
+    <link rel="shortcut icon" href="assets/images/favicon1.png">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Thees Engenharia - Transformando Projetos em Realidade</title>
@@ -13,6 +16,192 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+    /* Estilos para mensagens de status */
+    .status-message {
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: center;
+        display: block;
+        width: 100%;
+        transition: all 0.3s ease;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+    
+    .status-message.success {
+        color: #1e7e34;
+        background-color: rgba(40, 167, 69, 0.1);
+        border-left: 3px solid #28a745;
+    }
+    
+    .status-message.error {
+        color: #bd2130;
+        background-color: rgba(220, 53, 69, 0.1);
+        border-left: 3px solid #dc3545;
+    }
+    
+    /* Estilos refinados para o formulário - design elegante */
+    .contact-form {
+        background: #ffffff;
+        padding: 40px 60px;
+        border-radius: 10px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        border: 1px solid #f0f0f0;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .contact-form:hover {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .form-row {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+    .form-group {
+        margin-bottom: 30px;
+        position: relative;
+        width: 100%;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #222;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    /* Estilo base para todos os campos */
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 18px 22px;
+        border: none;
+        border-bottom: 2px solid #222;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s;
+        background-color: #f9f9f9;
+        font-family: 'Montserrat', sans-serif;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Estilos específicos para os campos de Nome, Telefone e Email */
+    .form-group input[name="nome"],
+    .form-group input[name="telefone"],
+    .form-group input[name="email"] {
+        height: 60px;
+        font-size: 17px;
+        padding: 16px 24px;
+        width: 100%;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #222;
+        box-shadow: none;
+        background-color: #ffffff;
+        outline: none;
+    }
+    
+    .form-group .required {
+        color: #222;
+        margin-left: 4px;
+        opacity: 0.7;
+    }
+    
+    /* Container para centralizar o botão */
+    .contact-form .btn-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .btn-submit {
+        background: #000;
+        color: white;
+        padding: 18px 45px;
+        border: 2px solid #000;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        width: auto;
+        display: inline-block;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        /* Efeito moderno com sombra */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        top: 0;
+        overflow: hidden;
+    }
+    
+    /* Efeito de brilho no hover */
+    .btn-submit::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        top: 0;
+        left: -80px;
+        transform: skewX(-30deg);
+        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    
+    .btn-submit:hover {
+        background: #222;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .btn-submit:hover::before {
+        left: 120%;
+    }
+    
+    .btn-submit:active {
+        top: 2px;
+        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Efeito de ripple */
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+    }
+    
+    @keyframes ripple {
+        to {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
+    
+    /* Animação do spinner */
+    .fa-spinner {
+        animation: spin 1s infinite linear;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
 <body>
     <header>
         <nav class="navbar">
@@ -98,7 +287,7 @@
                         Transformamos <span class="highlight">projetos</span> em realidade com excelência.
                     </h1>
                     <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        Obras civis, reformas e soluções sob medida com alto padrão técnico.
+                        Compromisso com prazos, projetos detalhados em alta definição 3D com segurança e clareza, excelência em qualidade e atendimento personalizado ao cliente.
                     </p>
                     <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                         <a href="#contato" class="btn btn-primary cta-btn">
@@ -127,7 +316,7 @@
                 <!-- Lado Esquerdo (Texto) -->
                 <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
                     <p class="lead-text">
-                        A Thees Engenharia atua com excelência no setor da construção civil, entregando obras residenciais, comerciais e institucionais com alto padrão técnico. Combinamos experiência, inovação e compromisso em cada etapa do projeto, garantindo segurança, durabilidade e satisfação para nossos clientes.
+                        A THEES ENGENHARIA surgiu da necessidade de atender a um mercado cada vez mais escasso na área de projetos, principalmente em BIM 3D, pois é uma tecnologia nova no ramo e poucas empresas oferecem esse serviço. Em pouco tempo, já nos tornamos destaque na área e comercializamos mais de 350 projetos, tanto em Belo Horizonte quanto em outras cidades.
                     </p>
                     
                     <div class="differential-list">
@@ -136,7 +325,7 @@
                                 <i class="fas fa-history"></i>
                             </div>
                             <div class="differential-text">
-                                <h3>+10 anos de experiência</h3>
+                                <h3>3 anos de experiência</h3>
                                 <p>Tradição e solidez no mercado da construção civil</p>
                             </div>
                         </div>
@@ -226,55 +415,55 @@
                 <!-- Serviço 1 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
-                        <i class="fas fa-building"></i>
+                        <i class="fas fa-plug"></i>
                     </div>
-                    <h3>Construção Civil</h3>
-                    <p>Execução completa de obras residenciais, comerciais e institucionais.</p>
+                    <h3>Projetos Elétricos e Hidráulicos em BIM 3D</h3>
+                    <p>Desenvolvemos projetos elétricos, hidrossanitários e de gás com a precisão do BIM 3D.</p>
                 </div>
                 
                 <!-- Serviço 2 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
-                        <i class="fas fa-hammer"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Reformas e Retrofit</h3>
-                    <p>Renovação inteligente de ambientes com foco em funcionalidade e estética.</p>
+                    <h3>Segurança Contra Incêndio em BIM 3D</h3>
+                    <p>Especializados em projetos de prevenção e combate a incêndio e emissão de AVCB, utilizando BIM 3D.</p>
                 </div>
                 
                 <!-- Serviço 3 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon">
-                        <i class="fas fa-drafting-compass"></i>
+                        <i class="fas fa-wind"></i>
                     </div>
-                    <h3>Projetos Estruturais</h3>
-                    <p>Desenvolvimento técnico de estruturas com segurança e precisão.</p>
+                    <h3>Climatização e Conforto em BIM 3D</h3>
+                    <p>Projetos de ar condicionado desenvolvidos em BIM 3D para máxima eficiência e conforto ambiental.</p>
                 </div>
                 
                 <!-- Serviço 4 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon">
-                        <i class="fas fa-tasks"></i>
+                        <i class="fas fa-road"></i>
                     </div>
-                    <h3>Gerenciamento de Obras</h3>
-                    <p>Coordenação e supervisão profissional de todas as etapas da obra.</p>
+                    <h3>Infraestrutura de Terreno em BIM 3D</h3>
+                    <p>Realizamos projetos de terraplenagem e drenagem pluvial com detalhamento em BIM 3D.</p>
                 </div>
                 
                 <!-- Serviço 5 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-video"></i>
                     </div>
-                    <h3>Consultoria Técnica</h3>
-                    <p>Análise e apoio técnico para viabilidade e planejamento de projetos.</p>
+                    <h3>Sistemas de Segurança e Proteção em BIM 3D</h3>
+                    <p>Projetos de CFTV (Circuito Fechado de TV) e SPDA (Sistemas de Proteção contra Descargas Atmosféricas) em BIM 3D.</p>
                 </div>
                 
                 <!-- Serviço 6 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="service-icon">
-                        <i class="fas fa-file-signature"></i>
+                        <i class="fas fa-leaf"></i>
                     </div>
-                    <h3>Regularização e Laudos</h3>
-                    <p>Serviços para documentação técnica, laudos, ART e legalizações.</p>
+                    <h3>Paisagismo Técnico e Drenagem em BIM 3D</h3>
+                    <p>Desenvolvemos projetos de pressurização de jardim e sistemas de drenagem diversos, todos em BIM 3D.</p>
                 </div>
             </div>
         </div>
@@ -295,17 +484,16 @@
                         <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Construa ou Reforme - Thees Engenharia">
                     </div>
                     <div class="project-content">
-                        <h3>Construa ou Reforme!</h3>
-                        <p>Contamos com especialistas em todas as áreas para seu projeto técnico completo.</p>
+                        <h3>Edifício Alto Luxo - Construtora PSAC Engenharia</h3>
+                        <p>Em parceria com a Construtora PSAC Engenharia, a Thees Engenharia aplicou sua expertise em BIM 3D para o desenvolvimento deste imponente edifício de 16 pavimentos, um marco de sofisticação e inovação.</p>
                         <ul class="project-features">
-                            <li><i class="fas fa-bolt"></i> Projetos Elétricos e Hidrossanitários</li>
-                            <li><i class="fas fa-network-wired"></i> Cabeamento Estruturado de Rede</li>
-                            <li><i class="fas fa-fire-extinguisher"></i> Sistemas de Prevenção de Incêndio</li>
-                            <li><i class="fas fa-temperature-low"></i> Gás e Climatização</li>
-                            <li><i class="fas fa-water"></i> Drenagem e Terraplenagem</li>
+                            <li><i class="far fa-calendar-alt"></i> Ano de Realização: 2025</li>
+                            <li><i class="fas fa-building"></i> Tipo: Edifício de Alto Luxo</li>
+                            <li><i class="fas fa-layer-group"></i> Pavimentos: 16</li>
+                            <li><i class="fas fa-star"></i> Destaque: Colaboração com Construtora PSAC Engenharia</li>
                         </ul>
                         <a href="https://www.instagram.com/reel/DJ9Gp2eOI7r/" class="btn-project-link" target="_blank">
-                            <i class="fab fa-instagram"></i> Ver no Instagram
+                            <i class="fas fa-link"></i> Ver Projeto
                         </a>
                     </div>
                 </div>
@@ -316,17 +504,16 @@
                         <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Casa dos Sonhos - Thees Engenharia">
                     </div>
                     <div class="project-content">
-                        <h3>Casa dos Sonhos!</h3>
-                        <p>Realizamos seu projeto residencial com excelência e dedicação.</p>
+                        <h3>Casa Alto Padrão - Construtora FX</h3>
+                        <p>A Thees Engenharia colaborou com a Construtora FX na concepção desta residência de alto padrão, aplicando as melhores práticas de BIM 3D para um resultado impecável.</p>
                         <ul class="project-features">
-                            <li><i class="fas fa-home"></i> Projetos residenciais de alto padrão</li>
-                            <li><i class="fas fa-ruler-combined"></i> Planejamento arquitetônico personalizado</li>
-                            <li><i class="fas fa-paint-roller"></i> Acabamentos premium e sofisticados</li>
-                            <li><i class="fas fa-leaf"></i> Soluções sustentáveis e eficientes</li>
-                            <li><i class="fas fa-clock"></i> Cumprimento rigoroso de prazos</li>
+                            <li><i class="far fa-calendar-alt"></i> Ano de Realização: 2025</li>
+                            <li><i class="fas fa-home"></i> Tipo: Casa Residencial Alto Padrão</li>
+                            <li><i class="fas fa-handshake"></i> Parceria: Construtora FX</li>
+                            <li><i class="fas fa-cube"></i> Tecnologia: BIM 3D Aplicado</li>
                         </ul>
                         <a href="https://www.instagram.com/reel/C7Ae17utTYv/" class="btn-project-link" target="_blank">
-                            <i class="fab fa-instagram"></i> Ver no Instagram
+                            <i class="fas fa-link"></i> Ver Projeto
                         </a>
                     </div>
                 </div>
@@ -337,17 +524,16 @@
                         <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Banheiro Luxuoso - Thees Engenharia">
                     </div>
                     <div class="project-content">
-                        <h3>Banheiro Luxuoso!</h3>
-                        <p>Transforme seu banheiro em um espaço de relaxamento e sofisticação.</p>
+                        <h3>Residência Gran Park - Alto Padrão</h3>
+                        <p>Projeto residencial de alto padrão desenvolvido para o Condomínio Gran Park, onde a Thees Engenharia empregou sua expertise em BIM 3D para criar um lar sofisticado e funcional.</p>
                         <ul class="project-features">
-                            <li><i class="fas fa-shower"></i> Duchas e chuveiros de alta pressão</li>
-                            <li><i class="fas fa-tint"></i> Metais e acabamentos premium</li>
-                            <li><i class="fas fa-square"></i> Revestimentos em porcelanato e mármore</li>
-                            <li><i class="fas fa-lightbulb"></i> Iluminação planejada e LED</li>
-                            <li><i class="fas fa-palette"></i> Design exclusivo e personalizado</li>
+                            <li><i class="far fa-calendar-alt"></i> Ano de Realização: 2024</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Local: Condomínio Gran Park</li>
+                            <li><i class="fas fa-home"></i> Tipo: Casa Residencial Alto Padrão</li>
+                            <li><i class="fas fa-drafting-compass"></i> Diferencial: Design Moderno e Funcional</li>
                         </ul>
                         <a href="https://www.instagram.com/reel/DHjyU2ESy8N/" class="btn-project-link" target="_blank">
-                            <i class="fab fa-instagram"></i> Ver no Instagram
+                            <i class="fas fa-link"></i> Ver Projeto
                         </a>
                     </div>
                 </div>
@@ -416,45 +602,39 @@
             <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
                 <div class="contact-form-container">
                     <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nome completo<span class="required">*</span></label>
-                            <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome_completo">Nome Completo<span class="required">*</span></label>
+                                <input type="text" id="nome_completo" name="nome" placeholder="Digite seu nome completo" required>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">E-mail<span class="required">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefone">Telefone<span class="required">*</span></label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail<span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="projectType">Tipo de projeto<span class="required">*</span></label>
-                            <select id="projectType" name="projectType" required>
-                                <option value="" disabled selected>Selecione uma opção</option>
-                                <option value="reforma">Reforma</option>
-                                <option value="construcao">Construção</option>
-                                <option value="projeto_estrutural">Projeto Estrutural</option>
-                                <option value="outro">Outro</option>
-                            </select>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem<span class="required">*</span></label>
+                                <textarea id="mensagem" name="message" placeholder="Descreva seu projeto ou dúvida" rows="5" required></textarea>
+                            </div>
                         </div>
                         
-                        <div class="form-group full-width">
-                            <label for="message">Mensagem<span class="required">*</span></label>
-                            <textarea id="message" name="message" placeholder="Descreva seu projeto ou dúvida" rows="4" required></textarea>
+                        <div class="btn-container">
+                            <button type="submit" class="btn-submit">Solicitar Contato</button>
                         </div>
-                        
-                        <button type="submit" class="btn-submit">Solicitar Contato</button>
+                        <p id="mensagemStatus" class="status-message"></p>
                     </form>
-                    
-                    <div class="form-success-message">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Mensagem enviada com sucesso!</h3>
-                        <p>Em breve entraremos em contato com você.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -469,7 +649,7 @@
                 </div>
                 <!-- Informações de contato e redes sociais -->
                 <div class="footer-contact">
-                    <p class="address"><i class="fas fa-map-marker-alt"></i> Belo Horizonte/MG - Savassi</p>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Belo Horizonte/MG</p>
                     <!-- Ícones de redes sociais -->
                     <div class="footer-social">
                         <a href="https://www.instagram.com/theesengenharia/" target="_blank" aria-label="Instagram">
@@ -488,7 +668,8 @@
         </div>
     </footer>
 
-    <!-- AOS Initialization -->
+    <!-- EmailJS e AOS Initialization -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         // Inicializar AOS
@@ -511,23 +692,48 @@
                 });
             }
             
-            // Funcionalidade do formulário de contato
-            const contactForm = document.getElementById('contactForm');
-            const successMessage = document.querySelector('.form-success-message');
+            // Inicialização do EmailJS
+            (function(){
+                emailjs.init("mnRtzubW-NtO8IVzM"); // Public Key
+            })();
             
+            // Funcionalidade do formulário de contato com EmailJS
+            const contactForm = document.getElementById('contactForm');
             if (contactForm) {
+                const statusMessage = document.getElementById('mensagemStatus');
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    
-                    // Simular envio do formulário (aqui você adicionaria sua lógica de envio real)
-                    setTimeout(function() {
-                        contactForm.style.opacity = '0';
-                        
-                        setTimeout(function() {
-                            contactForm.style.display = 'none';
-                            successMessage.classList.add('active');
-                        }, 300);
-                    }, 500);
+
+                    // Desativa o botão e mostra spinner
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                    statusMessage.textContent = '';
+                    statusMessage.className = 'status-message';
+
+                    // Enviar email usando EmailJS
+                    emailjs.sendForm('service_8kfsj2n', 'template_3dy4pw8', this)
+                        .then(function() {
+                            // Mostra mensagem de sucesso
+                            statusMessage.textContent = 'Mensagem enviada com sucesso!';
+                            statusMessage.className = 'status-message success';
+                            
+                            // Limpa o formulário
+                            contactForm.reset();
+                            
+                            // Restaura o botão
+                            submitButton.disabled = false;
+                            submitButton.innerHTML = 'Enviar';
+                        }, function(error) {
+                            // Mostra mensagem de erro
+                            statusMessage.textContent = 'Erro ao enviar: ' + error.text;
+                            statusMessage.className = 'status-message error';
+                            
+                            // Restaura o botão
+                            submitButton.disabled = false;
+                            submitButton.innerHTML = 'Enviar';
+                        })
                 });
             }
         });
