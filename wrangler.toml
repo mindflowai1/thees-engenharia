@@ -1,6 +1,0 @@
-name = "theesconstrutora" # This will be part of your *.pages.dev URL (e.g., theesconstrutora.pages.dev)
-compatibility_date = "2025-06-03" # Use a recent date
-
-# Specifies the directory containing your static assets (index.html, assets folder, etc.)
-# Since your index.html is in the root of the project, "." is correct.
-pages_build_output_dir = "."
