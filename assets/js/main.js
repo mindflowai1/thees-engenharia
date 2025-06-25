@@ -84,141 +84,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Inicialização do carrossel de serviços
+// Funcionalidade de rolagem suave para a seta "scroll-down-arrow"
 document.addEventListener('DOMContentLoaded', function() {
-    initServicesCarousel();
-});
-
-// Função para inicializar o carrossel de serviços
-function initServicesCarousel() {
-    const carousel = document.querySelector('.services-carousel');
-    if (!carousel) return;
-    
-    const cards = Array.from(carousel.querySelectorAll('.service-card'));
-    const prevBtn = document.querySelector('.carousel-control.prev');
-    const nextBtn = document.querySelector('.carousel-control.next');
-    const indicators = document.querySelector('.carousel-indicators');
-    
-    // Sempre mostrar 2 cards por vez
-    const cardsPerView = 2;
-    let currentIndex = 0;
-    
-    // Criar indicadores (pontos de navegação)
-    function createIndicators() {
-        indicators.innerHTML = '';
-        const totalSlides = Math.ceil(cards.length / cardsPerView);
-        
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('indicator');
-            if (i === 0) dot.classList.add('active');
+    const scrollDownArrow = document.querySelector('.scroll-down-arrow a');
+    if (scrollDownArrow) {
+        scrollDownArrow.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
             
-            dot.addEventListener('click', () => {
-                currentIndex = i * cardsPerView;
-                updateCarousel();
-            });
-            
-            indicators.appendChild(dot);
-        }
-    }
-    
-    // Atualizar indicadores ativos
-    function updateIndicators() {
-        const dots = indicators.querySelectorAll('.indicator');
-        const activeIndex = Math.floor(currentIndex / cardsPerView);
-        
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === activeIndex);
+            if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight || 0;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     }
-    
-    // Atualizar a visualização do carrossel
-    function updateCarousel() {
-        // Limitar o índice para evitar posições inválidas
-        if (currentIndex < 0) {
-            currentIndex = 0;
-        } else if (currentIndex > cards.length - cardsPerView) {
-            currentIndex = cards.length - cardsPerView;
-        }
-        
-        // Largura do card + margem (30px de margem total)
-        const cardTotalWidth = carousel.offsetWidth / cardsPerView;
-        const translateX = currentIndex * cardTotalWidth;
-        
-        carousel.style.transform = `translateX(-${translateX}px)`;
-        updateIndicators();
-    }
-    
-    // Navegação para o próximo slide
-    function nextSlide() {
-        currentIndex += cardsPerView;
-        
-        // Se estiver no último conjunto, voltar para o início
-        if (currentIndex >= cards.length) {
-            currentIndex = 0;
-        }
-        
-        updateCarousel();
-    }
-    
-    // Navegação para o slide anterior
-    function prevSlide() {
-        currentIndex -= cardsPerView;
-        
-        // Se estiver no primeiro conjunto, ir para o último
-        if (currentIndex < 0) {
-            currentIndex = Math.floor((cards.length - 1) / cardsPerView) * cardsPerView;
-        }
-        
-        updateCarousel();
-    }
-    
-    // Configurar eventos dos botões de navegação
-    if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-    }
-    
-    // Inicialização do carrossel
-    createIndicators();
-    updateCarousel();
-    
-    // Adicionar funcionalidade de swipe para dispositivos móveis
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    carousel.addEventListener('touchstart', e => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-    
-    carousel.addEventListener('touchend', e => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, { passive: true });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        if (touchEndX < touchStartX - swipeThreshold) {
-            nextSlide(); // Swipe para a esquerda
-        } else if (touchEndX > touchStartX + swipeThreshold) {
-            prevSlide(); // Swipe para a direita
-        }
-    }
-    
-    // Reajustar o carrossel quando a janela for redimensionada
-    window.addEventListener('resize', updateCarousel);
-}
+});
 
 // Mudança de aparência da navbar com scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.padding = '10px 0';
-        navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.padding = '15px 0';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector('.navbar');
+const navbarHeight = navbar.offsetHeight;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY && window.scrollY > navbarHeight) {
+        // Rolando para baixo e já passou da altura da navbar
+        navbar.classList.add('navbar-hidden');
+    } else if (window.scrollY < lastScrollY) {
+        // Rolando para cima
+        navbar.classList.remove('navbar-hidden');
     }
+    lastScrollY = window.scrollY;
 });
 
 // Destacar link ativo durante o scroll
@@ -348,4 +249,42 @@ document.addEventListener('DOMContentLoaded', function() {
     instagramScript.onload = function() {
         setTimeout(reloadInstagramWidget, 1000);
     };
+});
+
+// Animação de texto dinâmico para o banner
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOMContentLoaded fired.");
+    const dynamicWordsElement = document.getElementById('dynamic-words');
+    if (!dynamicWordsElement) {
+        console.error("Element with ID 'dynamic-words' not found!");
+        return;
+    }
+    console.log("Dynamic words element found:", dynamicWordsElement);
+
+    const words = ["Qualidade", "Eficiência", "Satisfação"];
+    let wordIndex = 0;
+
+    function updateWord() {
+        console.log("updateWord function called. Current wordIndex:", wordIndex);
+        // Adiciona classe para fade-out
+        dynamicWordsElement.style.opacity = 0;
+        console.log("Opacity set to 0.");
+
+        setTimeout(() => {
+            dynamicWordsElement.textContent = words[wordIndex];
+            console.log("Text content set to:", words[wordIndex]);
+            // Remove classe para fade-in
+            dynamicWordsElement.style.opacity = 1;
+            console.log("Opacity set to 1.");
+            wordIndex = (wordIndex + 1) % words.length;
+        }, 500); // Tempo para o fade-out (metade do tempo de transição definido no CSS)
+    }
+
+    // Inicia a primeira palavra imediatamente
+    updateWord();
+    console.log("First updateWord call.");
+
+    // Altera a palavra a cada 3 segundos (3000ms)
+    setInterval(updateWord, 3000);
+    console.log("Interval for updateWord set.");
 });
