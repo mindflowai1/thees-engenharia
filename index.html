@@ -2,10 +2,28 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="description" content="Thees Construtora - Excelência em engenharia e construção civil. Soluções completas para sua obra com qualidade e comprometimento.">
     <meta name="theme-color" content="#011c3a">
-    <title>Thees Construtora - Excelência em Engenharia</title>
+    <title>Thees Engenharia</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theesengenharia.com.br/">
+    <meta property="og:title" content="Thees Engenharia - Excelência em Construção Civil">
+    <meta property="og:description" content="Soluções completas em engenharia e construção civil com qualidade e comprometimento. Conheça nossos serviços e projetos.">
+    <meta property="og:image" content="https://theesengenharia.com.br/assets/images/logo_wpp.webp">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Logo Thees Engenharia">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://theesengenharia.com.br/">
+    <meta property="twitter:title" content="Thees Engenharia - Excelência em Construção Civil">
+    <meta property="twitter:description" content="Soluções completas em engenharia e construção civil com qualidade e comprometimento. Conheça nossos serviços e projetos.">
+    <meta property="twitter:image" content="https://theesengenharia.com.br/assets/images/logo_wpp.webp">
+    <meta property="twitter:image:alt" content="Logo Thees Engenharia">
     
     <!-- Preconnect para fontes e CDNs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +45,12 @@
     <link href="assets/css/styles.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
     <style>
+        /* Reset de estilos para garantir consistência entre navegadores */
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         /* Efeitos de hover personalizados */
         .btn-hover {
             display: inline-block;
@@ -291,9 +315,110 @@
         .nav-link:hover::after {
             width: 100%;
         }
+        /* Estilos para a seta de rolagem */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-7px) translateX(-50%);
+            }
+        }
+        
+        .scroll-down-arrow {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-down-arrow:hover {
+            opacity: 0.8;
+            transform: translateY(5px) translateX(-50%);
+        }
+        /* Estilos para a seta de rolagem */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-7px) translateX(-50%);
+            }
+        }
+        
+        .scroll-down-arrow {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-down-arrow:hover {
+            opacity: 0.8;
+            transform: translateY(5px) translateX(-50%);
+        }
+        /* Estilos para garantir que imagens não ultrapassem a largura do container */
+        img, video, iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Garantir que os containers principais não tenham overflow */
+        section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Ajustes para telas pequenas */
+        @media (max-width: 767px) {
+            body, html {
+                width: 100%;
+                overflow-x: hidden;
+                position: relative;
+            }
+            
+            /* Garante que os containers de seção usem 100% da largura disponível */
+            section > div {
+                width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Ajusta o padding para telas pequenas */
+            section {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
     </style>
 </head>
-<body class="font-['Poppins'] bg-white">
+<body class="font-['Poppins'] bg-white" style="margin: 0; padding: 0; width: 100%; overflow-x: hidden;">
     <!-- Cabeçalho -->
     <header class="fixed w-full z-50 transition-all duration-300" id="header">
         <nav class="bg-white">
@@ -301,7 +426,7 @@
                 <div class="flex justify-between h-20 items-center">
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center" style="height: 50px;">
-                        <a href="#" class="h-full">
+                        <a href="https://www.theesengenharia.com.br" class="h-full" target="_blank" rel="noopener noreferrer">
                             <img 
                                 src="assets/images/Logo 4 fundo transparente.png" 
                                 alt="Thees Construtora" 
@@ -340,16 +465,28 @@
                     <a href="#projetos" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200">Projetos</a>
                     <a href="#contato" class="block px-4 py-3 text-lg text-[#C89D23] font-medium hover:bg-gray-100 rounded-md transition-colors duration-200">Contato</a>
                 </div>
+                
+                <!-- Desenvolvido por -->
+                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%;">
+                    <p style="color: #9ca3af; font-size: 0.85rem; margin: 0;">
+                        Desenvolvido por 
+                        <a href="https://mindflowdigital.com.br" target="_blank" rel="noopener noreferrer" style="color: #C89D23; text-decoration: none; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#C89D23'">
+                            Mindflow Digital
+                        </a>
+                    </p>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- Conteúdo principal -->
-    <main style="width: 100%; overflow-x: hidden;">
+    <main style="width: 100%; max-width: 100%; overflow-x: hidden; position: relative;">
         <!-- Hero Section -->
-        <section id="inicio" style="width: 100%; height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <section id="inicio" style="width: 100%; height: 100vh; position: relative; overflow: hidden;">
             <div class="hero-bg"></div>
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); z-index: 2;"></div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 3;">
             <div style="color: white; position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box;">
                 <!-- Título centralizado -->
                 <div style="width: 100%; text-align: center;">
@@ -364,8 +501,14 @@
                         <span class="word">QUALIDADE</span>
                     </div>
                 </div>
-                </div>
             </div>
+            
+            <!-- Seta de rolagem -->
+            <a href="#servicos" class="scroll-down-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10; color: white; cursor: pointer; transition: all 0.3s ease; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; animation: bounce 2s infinite;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                    <path d="M19 14L12 21M12 21L5 14M12 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </section>
 
         <!-- Seção de Serviços -->
@@ -685,7 +828,7 @@
                                 </div>
                                 <div>
                                     <h3 style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">Telefone</h3>
-                                    <a href="tel:+5531999999999" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">(31) 99999-9999</a>
+                                    <a href="https://wa.me/5531994340753" target="_blank" rel="noopener noreferrer" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">(31) 99434-0753</a>
                                 </div>
                             </div>
 
@@ -695,7 +838,7 @@
                                 </div>
                                 <div>
                                     <h3 style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">E-mail</h3>
-                                    <a href="mailto:contato@theesengenharia.com.br" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">contato@theesengenharia.com.br</a>
+                                    <a href="mailto:comercial@theesengenharia.com.br" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">comercial@theesengenharia.com.br</a>
                                 </div>
                             </div>
 
@@ -714,10 +857,10 @@
                             <a href="#" class="social-icon" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Instagram">
+                            <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
@@ -782,40 +925,86 @@
     </main>
 
     <!-- Rodapé -->
-    <footer style="background-color: #011c3a; color: #ffffff; padding: 3rem 1rem; font-family: 'Poppins', sans-serif;">
-        <div style="max-width: 1000px; margin: 0 auto; width: 100%;">
-            <!-- Conteúdo principal do rodapé -->
-            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-bottom: 2rem;">
-                <!-- Ícones sociais -->
-                <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                    <a href="#" class="social-icon footer-social" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon footer-social" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-icon footer-social" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="social-icon footer-social" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+    <footer style="background-color: #011c3a; color: #ffffff; padding: 4rem 1rem 2rem; font-family: 'Poppins', sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <!-- Coluna 1: Logo e Contato -->
+                <div style="display: flex; flex-direction: column; height: 100%;">
+                    <div style="flex-grow: 1; display: flex; flex-direction: column;">
+                        <div style="margin-bottom: 1.5rem; padding-right: 1rem;">
+                            <img src="assets/images/logo rodape thees.png" alt="Thees Engenharia" style="max-width: 180px; width: 100%; height: auto; display: block;">
+                        </div>
+                        <div style="margin-top: auto;">
+                            <p style="margin: 1.5rem 0 0.5rem; color: #ffffff; font-weight: 500;">Entre em contato:</p>
+                            <p style="margin: 0.25rem 0;"><i class="fas fa-phone-alt" style="margin-right: 0.5rem; color: #C89D23;"></i> <a href="tel:5531994340753" style="color: inherit; text-decoration: none;">(31) 99434-0753</a></p>
+                            <p style="margin: 0.25rem 0 0;"><i class="fas fa-envelope" style="margin-right: 0.5rem; color: #C89D23;"></i> <a href="mailto:contato@theesengenharia.com.br" style="color: inherit; text-decoration: none;">contato@theesengenharia.com.br</a></p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Informações de direitos e CNPJ -->
-                <div style="color: #9ca3af; font-size: 0.9rem; margin-top: 1rem; line-height: 1.6;">
-                    <div>© 2023 Thees Engenharia. Todos os direitos reservados.</div>
-                    <div>CNPJ: 00.000.000/0001-00</div>
+                <!-- Coluna 2: Links de Navegação -->
+                <div style="text-align: left;">
+                    <h3 style="color: #ffffff; font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
+                        Navegação
+                        <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: #C89D23;"></span>
+                    </h3>
+                    <nav>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <li><a href="#inicio" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Início</a></li>
+                            <li><a href="#servicos" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Serviços</a></li>
+                            <li><a href="#sobre" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Sobre Nós</a></li>
+                            <li><a href="#projetos" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Projetos</a></li>
+                            <li><a href="#contato" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Coluna 3: Redes Sociais -->
+                <div style="text-align: left;">
+                    <h3 style="color: #ffffff; font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
+                        Redes Sociais
+                        <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: #C89D23;"></span>
+                    </h3>
+                    <p style="color: #9ca3af; font-size: 0.95rem; margin-bottom: 1.5rem;">Siga-nos em nossas redes sociais para ficar por dentro das novidades.</p>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                        <a href="#" class="social-icon" aria-label="Facebook" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#1877F2'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.background='radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#0A66C2'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5531994340753" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#25D366'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Links de navegação -->
-            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                <a href="#inicio" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.9rem;">Início</a>
-                <a href="#servicos" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.9rem;">Serviços</a>
-                <a href="#sobre" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.9rem;">Sobre Nós</a>
-                <a href="#projetos" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.9rem;">Projetos</a>
-                <a href="#contato" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.9rem;">Contato</a>
+            <!-- Rodapé inferior -->
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                <div style="color: #9ca3af; font-size: 0.85rem;">
+                    © 2023 Thees Engenharia. Todos os direitos reservados.
+                </div>
+                <div style="color: #9ca3af; font-size: 0.85rem;">
+                    CNPJ: 46.934.858/0001-24
+                </div>
+                <div style="color: #9ca3af; font-size: 0.85rem;">
+                    Desenvolvido por 
+                    <a href="https://mindflowdigital.com.br" target="_blank" rel="noopener noreferrer" 
+                       style="color: #C89D23; text-decoration: none; font-weight: 500; transition: color 0.2s ease;" 
+                       onmouseover="this.style.color='#ffffff'" 
+                       onmouseout="this.style.color='#C89D23'">
+                        Mindflow Digital
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -848,8 +1037,10 @@
     </style>
 
     <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5531999999999?text=Olá! Gostaria de mais informações sobre os serviços da Thees Engenharia." 
-       target="_blank" 
+    <a 
+       href="https://wa.me/5531994340753" 
+       target="_blank"
+       rel="noopener noreferrer"
        class="whatsapp-float" 
        aria-label="Fale conosco pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
@@ -1000,6 +1191,24 @@
         const words = ['QUALIDADE', 'EFICIÊNCIA', 'SATISFAÇÃO'];
         const wordsContainer = document.querySelector('.rotating-words');
         
+        // Função para rolagem suave
+        function smoothScroll(targetId) {
+            const target = document.querySelector(targetId);
+            if (target) {
+                const headerOffset = document.querySelector('header').offsetHeight;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Atualizar a URL sem recarregar a página
+                history.pushState(null, '', targetId);
+            }
+        }
+        
         // Adiciona as palavras ao DOM
         words.forEach((word, index) => {
             if (index > 0) { // Já adicionamos a primeira palavra no HTML
@@ -1007,6 +1216,28 @@
                 span.className = 'word';
                 span.textContent = word;
                 wordsContainer.appendChild(span);
+            }
+        });
+        
+        // Adicionar evento de clique para a seta de rolagem
+        const scrollArrow = document.querySelector('.scroll-down-arrow');
+        if (scrollArrow) {
+            scrollArrow.addEventListener('click', (e) => {
+                e.preventDefault();
+                smoothScroll(scrollArrow.getAttribute('href'));
+            });
+        }
+        
+        // Adicionar evento de clique para links de navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') !== '#') {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        smoothScroll(href);
+                    }
+                });
             }
         });
         
