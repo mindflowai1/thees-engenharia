@@ -1146,6 +1146,7 @@
             left: 0;
             right: 0;
             animation: wordFade 9s infinite;
+            white-space: nowrap;
         }
         
         .word:nth-child(1) { animation-delay: 0s; }
@@ -1178,9 +1179,17 @@
             }
             
             .word {
-                display: inline-block;
                 text-align: center;
                 width: 100%;
+            }
+            
+            /* Prevent line break for SATISFAÇÃO */
+            .satisfacao-word {
+                white-space: nowrap;
+                font-size: 3rem !important; /* Slightly smaller to fit better */
+                transform: scale(0.9); /* Scale down if needed */
+                transform-origin: center;
+                display: inline-block;
             }
         }
     </style>
@@ -1214,6 +1223,9 @@
             if (index > 0) { // Já adicionamos a primeira palavra no HTML
                 const span = document.createElement('span');
                 span.className = 'word';
+                if (word === 'SATISFAÇÃO') {
+                    span.classList.add('satisfacao-word');
+                }
                 span.textContent = word;
                 wordsContainer.appendChild(span);
             }
