@@ -226,13 +226,130 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Limpar listeners ao sair da página
     window.addEventListener('beforeunload', function() {
-        if (animationId) {
-            window.cancelAnimationFrame(animationId);
-        }
-        // Remover todos os event listeners
+        cancelAnimationFrame(animationId);
+        window.removeEventListener('scroll', handleScroll);
         window.removeEventListener('resize', handleResize);
-        window.removeEventListener('scroll', handleMenuOnScroll);
+        if (mobileMenuButton) mobileMenuButton.removeEventListener('click', toggleMobileMenu);
     });
+
+    // Função para exibir mensagem de sucesso/erro
+    function showMessage(form, message, isError = false) {
+        // Remove mensagens existentes
+        const existingMessage = form.querySelector('.form-message');
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        // Cria a mensagem
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `form-message p-4 mb-4 rounded-md ${isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`;
+        messageDiv.textContent = message;
+        
+        // Insere a mensagem antes do botão de envio
+        const submitButton = form.querySelector('button[type="submit"]');
+        form.insertBefore(messageDiv, submitButton);
+        
+        // Remove a mensagem após 5 segundos
+        setTimeout(() => {
+            messageDiv.style.opacity = '0';
+            setTimeout(() => messageDiv.remove(), 300);
+        }, 5000);
+    }
+
+    // Validação do formulário de contato com EmailJS
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Desabilita o botão de envio
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitButton.style.opacity = '0.7';
+            submitButton.style.cursor = 'not-allowed';
+            
+            try {
+                // Validação dos campos
+                const name = this.querySelector('#name').value.trim();
+                const email = this.querySelector('#email').value.trim();
+                const phone = this.querySelector('#phone').value.trim();
+                const subject = this.querySelector('#subject').value;
+                const message = this.querySelector('#message').value.trim();
+                const to_email = this.querySelector('#to_email').value;
+                
+                if (!name || !email || !subject || !message) {
+                    throw new Error('Por favor, preencha todos os campos obrigatórios.');
+                }
+                
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    throw new Error('Por favor, insira um endereço de e-mail válido.');
+                }
+                
+                // Prepara os parâmetros para o EmailJS
+                const templateParams = {
+                    from_name: name,
+                    from_email: email,
+                    to_email: to_email,
+                    phone: phone || 'Não informado',
+                    subject: subject,
+                    message: message,
+                    reply_to: email
+                };
+                
+                // Envia o e-mail usando o EmailJS
+                await emailjs.send(
+                    'default_service', // Usando o serviço padrão
+                    'template_logt5ac', // ID do template do EmailJS
+                    templateParams
+                );
+                
+                // Se chegou até aqui, o envio foi bem-sucedido
+                showMessage(this, 'Mensagem enviada com sucesso! Entraremos em contato em breve.', false);
+                
+                // Limpa o formulário
+                this.reset();
+                
+                // Rola para o topo do formulário
+                this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Redireciona para a página de agradecimento após 2 segundos
+                setTimeout(() => {
+                    window.location.href = 'obrigado.html';
+                }, 2000);
+                
+            } catch (error) {
+                console.error('Erro ao enviar o formulário:', error);
+                const errorMessage = error.message || 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.';
+                showMessage(this, errorMessage, true);
+                
+                // Rola até o formulário para mostrar a mensagem de erro
+                this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Reativa o botão de envio
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+                submitButton.style.opacity = '1';
+                submitButton.style.cursor = 'pointer';
+            }
+        });
+        
+        // Adiciona estilos dinâmicos para campos inválidos
+        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('invalid', function(e) {
+                e.preventDefault();
+                this.classList.add('border-red-500');
+            });
+            
+            input.addEventListener('input', function() {
+                if (this.checkValidity()) {
+                    this.classList.remove('border-red-500');
+                }
+            });
+        });
+    }
     
     // Registrar Service Worker para cache e recursos offline
     if ('serviceWorker' in navigator) {

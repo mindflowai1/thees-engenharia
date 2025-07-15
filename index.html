@@ -459,21 +459,30 @@
             <!-- Menu Mobile -->
             <div class="mobile-menu md:hidden bg-white shadow-lg" id="mobile-menu">
                 <div class="px-2 pt-2 pb-4 space-y-1">
-                    <a href="#inicio" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200">Início</a>
-                    <a href="#servicos" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200">Serviços</a>
-                    <a href="#sobre" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200">Sobre</a>
-                    <a href="#projetos" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200">Projetos</a>
-                    <a href="#contato" class="block px-4 py-3 text-lg text-[#C89D23] font-medium hover:bg-gray-100 rounded-md transition-colors duration-200">Contato</a>
+                    <a href="#inicio" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('inicio').scrollIntoView({behavior: 'smooth'}); return false;">Início</a>
+                    <a href="#servicos" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'}); return false;">Serviços</a>
+                    <a href="#sobre" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'}); return false;">Sobre</a>
+                    <a href="#projetos" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('projetos').scrollIntoView({behavior: 'smooth'}); return false;">Projetos</a>
+                    <a href="#contato" class="block px-4 py-3 text-lg text-[#C89D23] font-medium hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'}); return false;">Contato</a>
                 </div>
                 
-                <!-- Desenvolvido por -->
-                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%;">
-                    <p style="color: #9ca3af; font-size: 0.85rem; margin: 0;">
-                        Desenvolvido por 
-                        <a href="https://mindflowdigital.com.br" target="_blank" rel="noopener noreferrer" style="color: #C89D23; text-decoration: none; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#C89D23'">
-                            Mindflow Digital
-                        </a>
-                    </p>
+                <!-- Redes Sociais -->
+                <div style="margin-top: 0.5rem; padding-top: 0.25rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; display: flex; justify-content: center; gap: 0.75rem;">
+                    <!-- LinkedIn -->
+                    <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer" 
+                       style="color: #011c3a; text-decoration: none; transition: color 0.2s;" 
+                       onmouseover="this.style.color='#C89D23'" 
+                       onmouseout="this.style.color='#011c3a'">
+                        <img src="linkedin-1-svgrepo-com.svg" alt="LinkedIn" style="width: 40px; height: 40px;" />
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer" 
+                       style="color: #011c3a; text-decoration: none; transition: color 0.2s;" 
+                       onmouseover="this.style.color='#C89D23'" 
+                       onmouseout="this.style.color='#011c3a'">
+                        <img src="instagram-1-svgrepo-com.svg" alt="Instagram" style="width: 40px; height: 40px;" />
+                    </a>
                 </div>
             </div>
         </nav>
@@ -490,21 +499,25 @@
             <div style="color: white; position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box;">
                 <!-- Título centralizado -->
                 <div style="width: 100%; text-align: center;">
-                    <h1 style="font-size: 2.5rem; font-weight: normal; margin: 0 auto 0.5rem; text-transform: uppercase; letter-spacing: 2px; display: inline-block;">
+                    <h1 style="font-size: 2.5rem; font-weight: 700; margin: 0 auto 1rem; text-transform: uppercase; letter-spacing: 2px;">
                         ESPECIALISTAS EM
+
                     </h1>
-                </div>
-                
-                <!-- Palavras dinâmicas centralizadas -->
-                <div style="width: 100%; text-align: center; margin-top: 1rem;">
-                    <div class="rotating-words" style="font-size: 5rem; font-weight: 700; min-height: 6rem; display: inline-block; text-align: center;">
-                        <span class="word">QUALIDADE</span>
+                    <div id="dynamic-text" style="font-size: 5rem; font-weight: 700; margin: 0 auto; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease-in-out; text-align: center; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                        BIM 3D
                     </div>
+                    <style>
+                        @media (max-width: 768px) {
+                            #dynamic-text {
+                                font-size: 4rem !important;
+                            }
+                        }
+                    </style>
                 </div>
             </div>
             
             <!-- Seta de rolagem -->
-            <a href="#servicos" class="scroll-down-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10; color: white; cursor: pointer; transition: all 0.3s ease; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; animation: bounce 2s infinite;">
+            <a href="#servicos" class="scroll-down-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10; color: white; cursor: pointer; transition: all 0.3s ease; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; animation: bounce 2s infinite;" onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'}); return false;">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
                     <path d="M19 14L12 21M12 21L5 14M12 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -519,7 +532,7 @@
                     <h2 style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">Nossos Serviços</h2>
                     <div style="width: 80px; height: 4px; background-color: #C89D23; margin: 0 auto 1.5rem;"></div>
                     <p style="font-size: 1.25rem; color: #4b5563; max-width: 800px; margin: 0 auto; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-                        Projetos Complementares em BIM 3D com foco em precisão, inovação e responsabilidade.
+                        Projetos Complementares em <strong>BIM 3D</strong> com foco em precisão, inovação e responsabilidade.
                     </p>
                 </div>
 
@@ -613,7 +626,8 @@
                               transition: all 0.3s ease;
                               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
                        onmouseover="this.style.backgroundColor='#b38a1f'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';" 
-                       onmouseout="this.style.backgroundColor='#C89D23'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
+                       onmouseout="this.style.backgroundColor='#C89D23'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
+                       onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'}); return false;">
                         Quero solicitar um orçamento
                         <svg style="margin-left: 0.5rem; width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -838,7 +852,7 @@
                                 </div>
                                 <div>
                                     <h3 style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">E-mail</h3>
-                                    <a href="mailto:comercial@theesengenharia.com.br" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">comercial@theesengenharia.com.br</a>
+                                    <a href="mailto:contato@theesengenharia.com.br" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">contato@theesengenharia.com.br</a>
                                 </div>
                             </div>
 
@@ -871,6 +885,8 @@
                         <h3 style="font-size: 1.5rem; color: #011c3a; margin: 0 0 1.5rem 0; font-weight: 600;">Envie uma mensagem</h3>
                         
                         <form id="contactForm" style="display: grid; gap: 1.25rem;">
+                            <!-- Email de destino (substitua pelo e-mail que deve receber as mensagens) -->
+                            <input type="hidden" id="to_email" name="to_email" value="contato@theesengenharia.com.br">
                             <div>
                                 <label for="name" style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Nome Completo</label>
                                 <input type="text" id="name" name="name" required 
@@ -906,9 +922,14 @@
 
                             <div>
                                 <label for="message" style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Mensagem</label>
-                                <textarea id="message" name="message" rows="4" required
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    required
                                     style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; font-size: 1rem; font-family: 'Poppins', sans-serif; resize: vertical; min-height: 120px;"
-                                    placeholder="Como podemos ajudar você?"></textarea>
+                                    placeholder="Como podemos ajudar você?"
+                                ></textarea>
                             </div>
 
                             <button type="submit" 
@@ -1010,6 +1031,33 @@
     </footer>
 
     <style>
+        /* Estilos para mensagens do formulário */
+        .form-message {
+            transition: opacity 0.3s ease-in-out;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            border: 1px solid transparent;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-message.error {
+            background-color: #FEE2E2;
+            color: #991B1B;
+            border-color: #FCA5A5;
+        }
+        
+        .form-message.success {
+            background-color: #D1FAE5;
+            color: #065F46;
+            border-color: #6EE7B7;
+        }
+        
+        /* Estilo para campos inválidos */
+        .border-red-500 {
+            border-color: #EF4444 !important;
+        }
+        
         /* Estilos para melhorar a experiência do formulário */
         input, select, textarea {
             outline: none;
@@ -1138,174 +1186,53 @@
         });
     </script>
 
-    <style>
-        .word {
-            display: inline-block;
-            opacity: 0;
-            position: absolute;
-            left: 0;
-            right: 0;
-            animation: wordFade 9s infinite;
-            white-space: nowrap;
-        }
-        
-        .word:nth-child(1) { animation-delay: 0s; }
-        .word:nth-child(2) { animation-delay: 3s; }
-        .word:nth-child(3) { animation-delay: 6s; }
-        
-        @keyframes wordFade {
-            0% { opacity: 0; transform: translateY(20px); }
-            5% { opacity: 1; transform: translateY(0); }
-            28% { opacity: 1; transform: translateY(0); }
-            33% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 0; }
-        }
-        
-        .rotating-words {
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-            word-break: break-word;
-            padding: 0 1rem;
-        }
-        
-        /* Estilos para telas menores que 768px */
-        @media (max-width: 767px) {
-            .rotating-words {
-                font-size: 3.5rem !important;
-                min-height: 4.5rem;
-                padding: 0 0.5rem;
-            }
-            
-            .word {
-                text-align: center;
-                width: 100%;
-            }
-            
-            /* Prevent line break for SATISFAÇÃO */
-            .satisfacao-word {
-                white-space: nowrap;
-                font-size: 3rem !important; /* Slightly smaller to fit better */
-                transform: scale(0.9); /* Scale down if needed */
-                transform-origin: center;
-                display: inline-block;
-            }
-        }
-    </style>
+    
     
     <!-- Scripts -->
     <script>
-        // Texto rotativo
-        const words = ['QUALIDADE', 'EFICIÊNCIA', 'SATISFAÇÃO'];
-        const wordsContainer = document.querySelector('.rotating-words');
-        
-        // Função para rolagem suave
-        function smoothScroll(targetId) {
-            const target = document.querySelector(targetId);
-            if (target) {
-                const headerOffset = document.querySelector('header').offsetHeight;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20;
+        // Array com as palavras a serem alternadas
+        const words = ['BIM 3D', 'QUALIDADE', 'EFICIÊNCIA', 'PRAZO'];
+        let currentWord = 0;
+        const dynamicText = document.getElementById('dynamic-text');
+
+        // Mostra a primeira palavra imediatamente
+        dynamicText.style.opacity = '1';
+        dynamicText.style.transform = 'translateY(0)';
+
+        function changeText() {
+            // Esconde a palavra atual
+            dynamicText.style.opacity = '0';
+            dynamicText.style.transform = 'translateY(20px)';
+            
+            // Atualiza a palavra
+            setTimeout(() => {
+                currentWord = (currentWord + 1) % words.length;
+                const newWord = words[currentWord];
+                dynamicText.textContent = newWord;
                 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+
                 
-                // Atualizar a URL sem recarregar a página
-                history.pushState(null, '', targetId);
-            }
+                // Mostra a nova palavra
+                dynamicText.style.opacity = '1';
+                dynamicText.style.transform = 'translateY(0)';
+            }, 500);
         }
-        
-        // Adiciona as palavras ao DOM
-        words.forEach((word, index) => {
-            if (index > 0) { // Já adicionamos a primeira palavra no HTML
-                const span = document.createElement('span');
-                span.className = 'word';
-                if (word === 'SATISFAÇÃO') {
-                    span.classList.add('satisfacao-word');
-                }
-                span.textContent = word;
-                wordsContainer.appendChild(span);
-            }
-        });
-        
-        // Adicionar evento de clique para a seta de rolagem
-        const scrollArrow = document.querySelector('.scroll-down-arrow');
-        if (scrollArrow) {
-            scrollArrow.addEventListener('click', (e) => {
-                e.preventDefault();
-                smoothScroll(scrollArrow.getAttribute('href'));
-            });
-        }
-        
-        // Adicionar evento de clique para links de navegação suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            if (anchor.getAttribute('href') !== '#') {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href.startsWith('#')) {
-                        e.preventDefault();
-                        smoothScroll(href);
-                    }
-                });
-            }
-        });
-        
-        // Menu Mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const header = document.getElementById('header');
 
-        // Toggle do menu mobile
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenuButton.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Fechar menu ao clicar em um link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuButton.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        // Efeito de scroll no header
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                header.classList.remove('nav-scrolled');
-                return;
-            }
-            
-            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-                // Scroll para baixo
-                header.classList.add('scroll-down');
-                header.style.transform = 'translateY(-100%)';
-            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-                // Scroll para cima
-                header.classList.remove('scroll-down');
-                header.style.transform = 'translateY(0)';
-                header.classList.add('nav-scrolled');
-            }
-            
-            lastScroll = currentScroll;
-            
-            // Adiciona sombra quando o scroll for maior que 50px
-            if (currentScroll > 50) {
-                header.classList.add('nav-scrolled');
-            } else {
-                header.classList.remove('nav-scrolled');
-            }
-        });
+        // Inicia a animação
+        setInterval(changeText, 3000);
     </script>
+    
     
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Inicialização do EmailJS
+        (function() {
+            emailjs.init('Igh7EOExtjg07j7Qi');
+        })();
+    </script>
 </body>
 </html>
