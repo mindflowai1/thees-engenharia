@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="description" content="Thees Construtora - Excelência em engenharia e construção civil. Soluções completas para sua obra com qualidade e comprometimento.">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description"
+        content="Thees Construtora - Excelência em engenharia e construção civil. Soluções completas para sua obra com qualidade e comprometimento.">
     <meta name="theme-color" content="#011c3a">
     <title>Thees Engenharia</title>
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theesengenharia.com.br/">
     <meta property="og:title" content="Thees Engenharia - Excelência em Construção Civil">
-    <meta property="og:description" content="Soluções completas em engenharia e construção civil com qualidade e comprometimento. Conheça nossos serviços e projetos.">
+    <meta property="og:description"
+        content="Soluções completas em engenharia e construção civil com qualidade e comprometimento. Conheça nossos serviços e projetos.">
     <meta property="og:image" content="https://theesengenharia.com.br/assets/images/logo_wpp.webp">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
     <meta property="og:image:alt" content="Logo Thees Engenharia">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://theesengenharia.com.br/">
     <meta property="twitter:title" content="Thees Engenharia - Excelência em Construção Civil">
-    <meta property="twitter:description" content="Soluções completas em engenharia e construção civil com qualidade e comprometimento. Conheça nossos serviços e projetos.">
+    <meta property="twitter:description"
+        content="Soluções completas em engenharia e construção civil com qualidade e comprometimento. Conheça nossos serviços e projetos.">
     <meta property="twitter:image" content="https://theesengenharia.com.br/assets/images/logo_wpp.webp">
     <meta property="twitter:image:alt" content="Logo Thees Engenharia">
-    
+
     <!-- Preconnect para fontes e CDNs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,10 +45,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Tailwind CSS -->
     <link href="assets/css/styles.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </noscript>
     <style>
         /* Reset de estilos para garantir consistência entre navegadores */
         * {
@@ -65,12 +73,12 @@
             overflow: hidden;
             z-index: 1;
         }
-        
+
         .btn-hover:hover {
             color: #011c3a;
             font-weight: 700;
         }
-        
+
         .btn-hover::before {
             content: '';
             position: absolute;
@@ -83,11 +91,11 @@
             z-index: -1;
             border-radius: 4px;
         }
-        
+
         .btn-hover:hover::before {
             width: 100%;
         }
-        
+
         .social-icon {
             width: 40px;
             height: 40px;
@@ -103,7 +111,7 @@
             overflow: hidden;
             z-index: 1;
         }
-        
+
         .social-icon::before {
             content: '';
             position: absolute;
@@ -116,44 +124,46 @@
             z-index: -1;
             border-radius: 50%;
         }
-        
+
         .social-icon:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(200, 157, 35, 0.3);
             color: #011c3a;
         }
-        
+
         .social-icon:hover::before {
             height: 100%;
         }
-        
+
         .footer-social {
             background-color: rgba(255, 255, 255, 0.1) !important;
         }
-        
+
         .footer-social:hover {
             background-color: transparent !important;
         }
-        
+
         /* Estilos personalizados */
         @keyframes zoomInOut {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.1);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         .nav-scrolled {
             background-color: rgba(255, 255, 255, 0.98);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
         }
-        
+
         .hero-bg {
             position: absolute;
             top: 0;
@@ -165,6 +175,7 @@
             animation: zoomInOut 20s infinite ease-in-out;
             z-index: -1;
         }
+
         .hamburger span {
             display: block;
             width: 25px;
@@ -173,38 +184,44 @@
             margin: 5px 0;
             transition: all 0.3s ease-in-out;
         }
+
         .hamburger.active span:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
         }
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
+
         .hamburger.active span:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
         }
+
         /* Animações do menu mobile */
         @keyframes slideDown {
             from {
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         @keyframes slideUp {
             from {
                 opacity: 1;
                 transform: translateY(0);
             }
+
             to {
                 opacity: 0;
                 transform: translateY(-20px);
             }
         }
-        
+
         /* Estilos do menu mobile */
         .mobile-menu {
             position: fixed;
@@ -220,7 +237,7 @@
             z-index: 1000;
             transform-origin: top;
         }
-        
+
         .mobile-menu a {
             display: block;
             padding: 1rem 2rem;
@@ -231,30 +248,44 @@
             transform: translateX(-10px);
             opacity: 0;
         }
-        
-        .mobile-menu a:nth-child(1) { transition-delay: 0.1s; }
-        .mobile-menu a:nth-child(2) { transition-delay: 0.15s; }
-        .mobile-menu a:nth-child(3) { transition-delay: 0.2s; }
-        .mobile-menu a:nth-child(4) { transition-delay: 0.25s; }
-        .mobile-menu a:nth-child(5) { transition-delay: 0.3s; }
-        
+
+        .mobile-menu a:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .mobile-menu a:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .mobile-menu a:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        .mobile-menu a:nth-child(4) {
+            transition-delay: 0.25s;
+        }
+
+        .mobile-menu a:nth-child(5) {
+            transition-delay: 0.3s;
+        }
+
         .mobile-menu a:hover {
             background-color: #f9f9f9;
             color: #C89D23;
             padding-left: 2.5rem;
         }
-        
+
         .mobile-menu.active {
             max-height: 500px;
             opacity: 1;
             border-top: 1px solid #f0f0f0;
         }
-        
+
         .mobile-menu.active a {
             transform: translateX(0);
             opacity: 1;
         }
-        
+
         /* Estilo para o botão do menu mobile */
         .hamburger {
             cursor: pointer;
@@ -265,11 +296,11 @@
             transition: transform 0.3s ease;
             z-index: 1100;
         }
-        
+
         .hamburger:hover {
             transform: scale(1.1);
         }
-        
+
         .hamburger span {
             display: block;
             width: 25px;
@@ -279,29 +310,31 @@
             transition: all 0.3s ease-in-out;
             transform-origin: center;
         }
-        
+
         .hamburger.active span:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
             background-color: #C89D23;
         }
-        
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
             transform: translateX(-20px);
         }
-        
+
         .hamburger.active span:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
             background-color: #C89D23;
         }
-        
+
         /* Previne que o body role quando o menu estiver aberto */
         body.menu-open {
             overflow: hidden;
         }
+
         .nav-link {
             position: relative;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -312,22 +345,31 @@
             background-color: #C89D23;
             transition: width 0.3s ease-in-out;
         }
+
         .nav-link:hover::after {
             width: 100%;
         }
+
         /* Estilos para a seta de rolagem */
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0) translateX(-50%);
             }
+
             40% {
                 transform: translateY(-15px) translateX(-50%);
             }
+
             60% {
                 transform: translateY(-7px) translateX(-50%);
             }
         }
-        
+
         .scroll-down-arrow {
             position: absolute;
             bottom: 30px;
@@ -344,24 +386,32 @@
             align-items: center;
             animation: bounce 2s infinite;
         }
-        
+
         .scroll-down-arrow:hover {
             opacity: 0.8;
             transform: translateY(5px) translateX(-50%);
         }
+
         /* Estilos para a seta de rolagem */
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0) translateX(-50%);
             }
+
             40% {
                 transform: translateY(-15px) translateX(-50%);
             }
+
             60% {
                 transform: translateY(-7px) translateX(-50%);
             }
         }
-        
+
         .scroll-down-arrow {
             position: absolute;
             bottom: 30px;
@@ -378,13 +428,16 @@
             align-items: center;
             animation: bounce 2s infinite;
         }
-        
+
         .scroll-down-arrow:hover {
             opacity: 0.8;
             transform: translateY(5px) translateX(-50%);
         }
+
         /* Estilos para garantir que imagens não ultrapassem a largura do container */
-        img, video, iframe {
+        img,
+        video,
+        iframe {
             max-width: 100%;
             height: auto;
         }
@@ -395,29 +448,64 @@
             overflow: hidden;
         }
 
+        /* Estilos da faixa de parceiros */
+        .partners-slider:hover .partners-track {
+            animation-play-state: paused;
+        }
+
+        .partner-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .partner-logo img {
+            transition: filter 0.3s ease;
+        }
+
+        .partner-logo:hover img {
+            filter: grayscale(0%) !important;
+        }
+
         /* Ajustes para telas pequenas */
         @media (max-width: 767px) {
-            body, html {
+
+            body,
+            html {
                 width: 100%;
                 overflow-x: hidden;
                 position: relative;
             }
-            
+
             /* Garante que os containers de seção usem 100% da largura disponível */
-            section > div {
+            section>div {
                 width: 100% !important;
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }
-            
+
             /* Ajusta o padding para telas pequenas */
             section {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
             }
+
+            /* Ajustes da faixa de parceiros para mobile */
+            .partners-track {
+                gap: 2rem !important;
+                animation-duration: 4s !important;
+            }
+
+            .partner-logo {
+                height: 40px !important;
+            }
+
+            .partner-logo img {
+                max-width: 100px !important;
+            }
         }
     </style>
 </head>
+
 <body class="font-['Poppins'] bg-white" style="margin: 0; padding: 0; width: 100%; overflow-x: hidden;">
     <!-- Cabeçalho -->
     <header class="fixed w-full z-50 transition-all duration-300" id="header">
@@ -426,23 +514,25 @@
                 <div class="flex justify-between h-20 items-center">
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center" style="height: 50px;">
-                        <a href="https://www.theesengenharia.com.br" class="h-full" target="_blank" rel="noopener noreferrer">
-                            <img 
-                                src="assets/images/Logo 4 fundo transparente.png" 
-                                alt="Thees Construtora" 
-                                class="h-full w-auto max-h-full"
-                                style="object-fit: contain; max-width: 180px;"
-                            >
+                        <a href="https://www.theesengenharia.com.br" class="h-full" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="assets/images/Logo 4 fundo transparente.png" alt="Thees Construtora"
+                                class="h-full w-auto max-h-full" style="object-fit: contain; max-width: 180px;">
                         </a>
                     </div>
 
                     <!-- Menu Desktop -->
                     <div class="hidden md:flex md:items-center md:space-x-8">
-                        <a href="#inicio" class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Início</a>
-                        <a href="#servicos" class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Serviços</a>
-                        <a href="#sobre" class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Sobre</a>
-                        <a href="#projetos" class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Projetos</a>
-                        <a href="#contato" class="bg-[#C89D23] text-white px-6 py-2 rounded-full font-medium hover:bg-[#b38a1f] transition-colors duration-200 transform hover:scale-105">Contato</a>
+                        <a href="#inicio"
+                            class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Início</a>
+                        <a href="#servicos"
+                            class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Serviços</a>
+                        <a href="#sobre"
+                            class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Sobre</a>
+                        <a href="#projetos"
+                            class="nav-link text-[#011c3a] hover:text-[#C89D23] px-3 py-2 font-medium transition-colors duration-200">Projetos</a>
+                        <a href="#contato"
+                            class="bg-[#C89D23] text-white px-6 py-2 rounded-full font-medium hover:bg-[#b38a1f] transition-colors duration-200 transform hover:scale-105">Contato</a>
                     </div>
 
                     <!-- Botão Mobile -->
@@ -459,28 +549,37 @@
             <!-- Menu Mobile -->
             <div class="mobile-menu md:hidden bg-white shadow-lg" id="mobile-menu">
                 <div class="px-2 pt-2 pb-4 space-y-1">
-                    <a href="#inicio" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('inicio').scrollIntoView({behavior: 'smooth'}); return false;">Início</a>
-                    <a href="#servicos" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'}); return false;">Serviços</a>
-                    <a href="#sobre" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'}); return false;">Sobre</a>
-                    <a href="#projetos" class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('projetos').scrollIntoView({behavior: 'smooth'}); return false;">Projetos</a>
-                    <a href="#contato" class="block px-4 py-3 text-lg text-[#C89D23] font-medium hover:bg-gray-100 rounded-md transition-colors duration-200" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'}); return false;">Contato</a>
+                    <a href="#inicio"
+                        class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200"
+                        onclick="document.getElementById('inicio').scrollIntoView({behavior: 'smooth'}); return false;">Início</a>
+                    <a href="#servicos"
+                        class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200"
+                        onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'}); return false;">Serviços</a>
+                    <a href="#sobre"
+                        class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200"
+                        onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'}); return false;">Sobre</a>
+                    <a href="#projetos"
+                        class="block px-4 py-3 text-lg text-[#011c3a] hover:bg-gray-100 rounded-md transition-colors duration-200"
+                        onclick="document.getElementById('projetos').scrollIntoView({behavior: 'smooth'}); return false;">Projetos</a>
+                    <a href="#contato"
+                        class="block px-4 py-3 text-lg text-[#C89D23] font-medium hover:bg-gray-100 rounded-md transition-colors duration-200"
+                        onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'}); return false;">Contato</a>
                 </div>
-                
+
                 <!-- Redes Sociais -->
-                <div style="margin-top: 0.5rem; padding-top: 0.25rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; display: flex; justify-content: center; gap: 0.75rem;">
+                <div
+                    style="margin-top: 0.5rem; padding-top: 0.25rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; display: flex; justify-content: center; gap: 0.75rem;">
                     <!-- LinkedIn -->
-                    <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer" 
-                       style="color: #011c3a; text-decoration: none; transition: color 0.2s;" 
-                       onmouseover="this.style.color='#C89D23'" 
-                       onmouseout="this.style.color='#011c3a'">
+                    <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer"
+                        style="color: #011c3a; text-decoration: none; transition: color 0.2s;"
+                        onmouseover="this.style.color='#C89D23'" onmouseout="this.style.color='#011c3a'">
                         <img src="linkedin-1-svgrepo-com.svg" alt="LinkedIn" style="width: 40px; height: 40px;" />
                     </a>
-                    
+
                     <!-- Instagram -->
-                    <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer" 
-                       style="color: #011c3a; text-decoration: none; transition: color 0.2s;" 
-                       onmouseover="this.style.color='#C89D23'" 
-                       onmouseout="this.style.color='#011c3a'">
+                    <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer"
+                        style="color: #011c3a; text-decoration: none; transition: color 0.2s;"
+                        onmouseover="this.style.color='#C89D23'" onmouseout="this.style.color='#011c3a'">
                         <img src="instagram-1-svgrepo-com.svg" alt="Instagram" style="width: 40px; height: 40px;" />
                     </a>
                 </div>
@@ -493,119 +592,159 @@
         <!-- Hero Section -->
         <section id="inicio" style="width: 100%; height: 100vh; position: relative; overflow: hidden;">
             <div class="hero-bg"></div>
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-            <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); z-index: 2;"></div>
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 3;">
-            <div style="color: white; position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box;">
-                <!-- Título centralizado -->
-                <div style="width: 100%; text-align: center;">
-                    <h1 style="font-size: 2.5rem; font-weight: 700; margin: 0 auto 1rem; text-transform: uppercase; letter-spacing: 2px;">
-                        ESPECIALISTAS EM
-
-                    </h1>
-                    <div id="dynamic-text" style="font-size: 5rem; font-weight: 700; margin: 0 auto; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease-in-out; text-align: center; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                        BIM 3D
-                    </div>
-                    <style>
-                        @media (max-width: 768px) {
-                            #dynamic-text {
-                                font-size: 4rem !important;
-                            }
-                        }
-                    </style>
-                </div>
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
             </div>
-            
-            <!-- Seta de rolagem -->
-            <a href="#servicos" class="scroll-down-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10; color: white; cursor: pointer; transition: all 0.3s ease; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; animation: bounce 2s infinite;" onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'}); return false;">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
-                    <path d="M19 14L12 21M12 21L5 14M12 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
+            <div
+                style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); z-index: 2;">
+            </div>
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 3;">
+                <div
+                    style="color: white; position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box;">
+                    <!-- Título centralizado -->
+                    <div style="width: 100%; text-align: center;">
+                        <h1
+                            style="font-size: 2.5rem; font-weight: 700; margin: 0 auto 1rem; text-transform: uppercase; letter-spacing: 2px;">
+                            ESPECIALISTAS EM
+
+                        </h1>
+                        <div id="dynamic-text"
+                            style="font-size: 6rem; font-weight: 700; margin: 0 auto; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease-in-out; text-align: center; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                            QUALIDADE
+                        </div>
+                        <style>
+                            @media (max-width: 768px) {
+                                #dynamic-text {
+                                    font-size: 4rem !important;
+                                }
+                            }
+
+                            @media (max-width: 480px) {
+                                #dynamic-text {
+                                    font-size: 3rem !important;
+                                    letter-spacing: 1px !important;
+                                }
+                            }
+                        </style>
+                    </div>
+                </div>
+
+                <!-- Seta de rolagem -->
+                <a href="#servicos" class="scroll-down-arrow"
+                    style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10; color: white; cursor: pointer; transition: all 0.3s ease; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; animation: bounce 2s infinite;"
+                    onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'}); return false;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color: white;">
+                        <path d="M19 14L12 21M12 21L5 14M12 21V3" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
         </section>
 
         <!-- Seção de Serviços -->
-        <section id="servicos" style="width: 100%; padding: 5rem 1rem; background-color: #ffffff; box-sizing: border-box;">
+        <section id="servicos"
+            style="width: 100%; padding: 5rem 1rem; background-color: #ffffff; box-sizing: border-box;">
             <div style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 1rem; box-sizing: border-box;">
                 <!-- Cabeçalho -->
                 <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2 style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">Nossos Serviços</h2>
+                    <h2
+                        style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">
+                        Nossos Serviços</h2>
                     <div style="width: 80px; height: 4px; background-color: #C89D23; margin: 0 auto 1.5rem;"></div>
-                    <p style="font-size: 1.25rem; color: #4b5563; max-width: 800px; margin: 0 auto; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-                        Projetos Complementares em <strong>BIM 3D</strong> com foco em precisão, inovação e responsabilidade.
+                    <p
+                        style="font-size: 1.25rem; color: #4b5563; max-width: 800px; margin: 0 auto; line-height: 1.6; font-family: 'Poppins', sans-serif;">
+                        Projetos Complementares em <strong>BIM 3D</strong> com foco em precisão, inovação e
+                        responsabilidade.
                     </p>
                 </div>
 
                 <!-- Lista de Serviços -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; width: 100%;">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; width: 100%;">
                     <!-- Coluna 1 -->
                     <div>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto Elétrico</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto Hidrossanitário</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto de Incêndio</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
-                                <span style="color: #011c3a; font-size: 1rem;">Emissão de AVCB no Corpo de Bombeiros</span>
+                                <span style="color: #011c3a; font-size: 1rem;">Emissão de AVCB no Corpo de
+                                    Bombeiros</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto Terraplenagem</span>
                             </li>
                         </ul>
                     </div>
-                    
+
                     <!-- Coluna 2 -->
                     <div>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto Drenagem</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto de Gás</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto Estrutural</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Cabeamento Estrutural de Rede</span>
                             </li>
                         </ul>
                     </div>
-                    
+
                     <!-- Coluna 3 -->
                     <div>
                         <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto de CFTV</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto de SPDA</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto de Telecomunicações</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto de Ar Condicionado</span>
                             </li>
-                            <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
+                            <li
+                                style="padding: 0.75rem 0; display: flex; align-items: flex-start; border-bottom: 1px solid #f0f0f0;">
                                 <span style="color: #C89D23; margin-right: 0.75rem; font-size: 1.1rem;">•</span>
                                 <span style="color: #011c3a; font-size: 1rem;">Projeto de Muro de Arrimo</span>
                             </li>
@@ -615,8 +754,7 @@
 
                 <!-- Botão de CTA -->
                 <div style="text-align: center; margin-top: 2.5rem;">
-                    <a href="#contato" 
-                       style="display: inline-flex; align-items: center; justify-content: center;
+                    <a href="#contato" style="display: inline-flex; align-items: center; justify-content: center;
                               background-color: #C89D23; color: white; 
                               padding: 0.875rem 2.5rem; 
                               border-radius: 50px;
@@ -625,12 +763,14 @@
                               text-decoration: none; 
                               transition: all 0.3s ease;
                               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
-                       onmouseover="this.style.backgroundColor='#b38a1f'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';" 
-                       onmouseout="this.style.backgroundColor='#C89D23'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
-                       onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'}); return false;">
+                        onmouseover="this.style.backgroundColor='#b38a1f'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';"
+                        onmouseout="this.style.backgroundColor='#C89D23'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
+                        onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'}); return false;">
                         Quero solicitar um orçamento
-                        <svg style="margin-left: 0.5rem; width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <svg style="margin-left: 0.5rem; width: 1.25rem; height: 1.25rem;" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </a>
                 </div>
@@ -643,46 +783,58 @@
                 <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
                     <!-- Lado Esquerdo - Texto -->
                     <div style="flex: 1; min-width: 300px; align-self: flex-start; padding-top: 0;">
-                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin: 0 0 1rem 0; font-family: 'Poppins', sans-serif;">
+                        <h2
+                            style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin: 0 0 1rem 0; font-family: 'Poppins', sans-serif;">
                             Sobre a Thees Engenharia
                         </h2>
                         <div style="width: 80px; height: 4px; background-color: #C89D23; margin: 0 0 1.5rem 0;"></div>
-                        
+
                         <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">
-                            A Thees Engenharia surgiu da necessidade de atender a um mercado cada vez mais escasso na área de projetos, principalmente em BIM 3D, pois é uma tecnologia nova no ramo e poucas empresas oferecem esse serviço. Em pouco tempo, já nos tornamos destaque na área e comercializamos mais de 350 projetos, tanto em Belo Horizonte quanto em outras cidades.
+                            A Thees Engenharia surgiu da necessidade de atender a um mercado cada vez mais escasso na
+                            área de projetos, principalmente em BIM 3D, pois é uma tecnologia nova no ramo e poucas
+                            empresas oferecem esse serviço. Em pouco tempo, já nos tornamos destaque na área e
+                            comercializamos mais de 350 projetos, tanto em Belo Horizonte quanto em outras cidades.
                         </p>
 
                         <!-- Diferenciais -->
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
                             <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
                                 <div style="color: #C89D23; font-size: 1.25rem;">✓</div>
                                 <div>
-                                    <h4 style="font-weight: 600; color: #011c3a; margin: 0 0 0.25rem 0;">+350 Projetos</h4>
-                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Entregues com excelência</p>
+                                    <h4 style="font-weight: 600; color: #011c3a; margin: 0 0 0.25rem 0;">+350 Projetos
+                                    </h4>
+                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Entregues com excelência
+                                    </p>
                                 </div>
                             </div>
-                            
+
                             <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
                                 <div style="color: #C89D23; font-size: 1.25rem;">✓</div>
                                 <div>
-                                    <h4 style="font-weight: 600; color: #011c3a; margin: 0 0 0.25rem 0;">Tecnologia BIM</h4>
-                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Soluções em 3D avançadas</p>
+                                    <h4 style="font-weight: 600; color: #011c3a; margin: 0 0 0.25rem 0;">Tecnologia BIM
+                                    </h4>
+                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Soluções em 3D avançadas
+                                    </p>
                                 </div>
                             </div>
-                            
+
                             <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
                                 <div style="color: #C89D23; font-size: 1.25rem;">✓</div>
                                 <div>
-                                    <h4 style="font-weight: 600; color: #011c3a; margin: 0 0 0.25rem 0;">Atendimento</h4>
-                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Personalizado e dedicado</p>
+                                    <h4 style="font-weight: 600; color: #011c3a; margin: 0 0 0.25rem 0;">Atendimento
+                                    </h4>
+                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Personalizado e dedicado
+                                    </p>
                                 </div>
                             </div>
-                            
+
                             <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
                                 <div style="color: #C89D23; font-size: 1.25rem;">✓</div>
                                 <div>
                                     <h4 style="font-weight: 600; color: #011c3a; margin: 0 0 0.25rem 0;">Qualidade</h4>
-                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Garantida em cada projeto</p>
+                                    <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Garantida em cada projeto
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -690,15 +842,13 @@
 
                     <!-- Lado Direito - Imagem -->
                     <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: center;">
-                        <div style="width: 100%; max-width: 400px; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
-                            <img 
-                                src="assets/images/thees.webp" 
-                                alt="Fernanda Thees - Fundadora e Diretora Executiva"
-                                style="width: 100%; height: auto; display: block;"
-                                loading="lazy"
-                            >
+                        <div
+                            style="width: 100%; max-width: 400px; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+                            <img src="assets/images/thees.webp" alt="Fernanda Thees - Fundadora e Diretora Executiva"
+                                style="width: 100%; height: auto; display: block;" loading="lazy">
                         </div>
-                        <p style="text-align: center; margin-top: 1.5rem; color: #4b5563; font-style: italic; font-size: 1.1rem;">
+                        <p
+                            style="text-align: center; margin-top: 1.5rem; color: #4b5563; font-style: italic; font-size: 1.1rem;">
                             Fernanda Thees — Fundadora e Diretora Executiva
                         </p>
                     </div>
@@ -706,12 +856,48 @@
             </div>
         </section>
 
+        <!-- Seção de Parceiros -->
+        <section
+            style="width: 100%; padding: 3rem 0; background-color: #011c3a; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; overflow: hidden;">
+
+
+            <!-- Container da animação - largura total -->
+            <div class="partners-slider" style="width: 100%; overflow: hidden; position: relative;">
+                <div class="partners-track" id="partnersTrack"
+                    style="display: flex; gap: 15rem; align-items: center; will-change: transform;">
+                    <!-- Logos originais -->
+                    <div class="partner-logo"
+                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
+                        <img src="assets/images/logos/1.png" alt="Parceiro 1"
+                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="partner-logo"
+                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
+                        <img src="assets/images/logos/2.png" alt="Parceiro 2"
+                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="partner-logo"
+                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
+                        <img src="assets/images/logos/3.png" alt="Parceiro 3"
+                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="partner-logo"
+                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
+                        <img src="assets/images/logos/4.png" alt="Parceiro 4"
+                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Seção de Projetos -->
-        <section id="projetos" style="width: 100%; padding: 5rem 1rem; background-color: #ffffff; box-sizing: border-box;">
+        <section id="projetos"
+            style="width: 100%; padding: 5rem 1rem; background-color: #ffffff; box-sizing: border-box;">
             <div style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 1rem; box-sizing: border-box;">
                 <!-- Cabeçalho -->
                 <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2 style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin: 0 0 1rem 0; font-family: 'Poppins', sans-serif;">
+                    <h2
+                        style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin: 0 0 1rem 0; font-family: 'Poppins', sans-serif;">
                         Nossos Projetos
                     </h2>
                     <div style="width: 80px; height: 4px; background-color: #C89D23; margin: 0 auto 1.5rem;"></div>
@@ -723,65 +909,74 @@
                 <!-- Grid de Projetos -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
                     <!-- Projeto 1 -->
-                    <div class="project-card" style="border-radius: 0.5rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="project-card"
+                        style="border-radius: 0.5rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <div style="position: relative; overflow: hidden; padding-top: 66.66%;">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                                alt="Projeto Residencial de Luxo"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
-                                loading="lazy"
-                            >
-                            <div class="project-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(1, 28, 58, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
-                                <button class="view-project" style="background: #C89D23; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
+                            <img src="assets/images/housi.webp" alt="Projeto Vertical Contemporâneo"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; transition: transform 0.5s ease;"
+                                loading="lazy">
+                            <div class="project-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(1, 28, 58, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                <button class="view-project"
+                                    style="background: #C89D23; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
                                     Ver Detalhes
                                 </button>
                             </div>
                         </div>
                         <div style="padding: 1.5rem;">
-                            <h3 style="font-size: 1.25rem; color: #011c3a; margin: 0 0 0.5rem 0; font-weight: 600;">Residencial de Luxo</h3>
-                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Projeto arquitetônico completo com foco em sofisticação e conforto.</p>
+                            <h3 style="font-size: 1.25rem; color: #011c3a; margin: 0 0 0.5rem 0; font-weight: 600;">
+                                Projeto Vertical Contemporâneo</h3>
+                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Edifício de uso misto com fachada
+                                verde, iluminação em LED e soluções sustentáveis para centros urbanos. Uma combinação de
+                                estética moderna e eficiência construtiva.</p>
                         </div>
                     </div>
 
                     <!-- Projeto 2 -->
-                    <div class="project-card" style="border-radius: 0.5rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="project-card"
+                        style="border-radius: 0.5rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <div style="position: relative; overflow: hidden; padding-top: 66.66%;">
-                            <img 
-                                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                                alt="Edifício Corporativo"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
-                                loading="lazy"
-                            >
-                            <div class="project-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(1, 28, 58, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
-                                <button class="view-project" style="background: #C89D23; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
+                            <img src="assets/images/garden.webp" alt="Residencial de Alto Padrão"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; transition: transform 0.5s ease;"
+                                loading="lazy">
+                            <div class="project-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(1, 28, 58, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                <button class="view-project"
+                                    style="background: #C89D23; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
                                     Ver Detalhes
                                 </button>
                             </div>
                         </div>
                         <div style="padding: 1.5rem;">
-                            <h3 style="font-size: 1.25rem; color: #011c3a; margin: 0 0 0.5rem 0; font-weight: 600;">Edifício Corporativo</h3>
-                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Solução empresarial moderna com foco em eficiência e tecnologia.</p>
+                            <h3 style="font-size: 1.25rem; color: #011c3a; margin: 0 0 0.5rem 0; font-weight: 600;">
+                                Residencial de Alto Padrão</h3>
+                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Torre elegante com soluções
+                                inteligentes de ventilação e integração paisagística. Projeto que une arquitetura
+                                contemporânea, conforto urbano e excelência construtiva.</p>
                         </div>
                     </div>
 
                     <!-- Projeto 3 -->
-                    <div class="project-card" style="border-radius: 0.5rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="project-card"
+                        style="border-radius: 0.5rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <div style="position: relative; overflow: hidden; padding-top: 66.66%;">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1153&q=80" 
-                                alt="Reforma de Interiores"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
-                                loading="lazy"
-                            >
-                            <div class="project-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(1, 28, 58, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
-                                <button class="view-project" style="background: #C89D23; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
+                            <img src="assets/images/interior_luxo.webp" alt="Design de Interiores com Sofisticação"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; transition: transform 0.5s ease;"
+                                loading="lazy">
+                            <div class="project-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(1, 28, 58, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                <button class="view-project"
+                                    style="background: #C89D23; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
                                     Ver Detalhes
                                 </button>
                             </div>
                         </div>
                         <div style="padding: 1.5rem;">
-                            <h3 style="font-size: 1.25rem; color: #011c3a; margin: 0 0 0.5rem 0; font-weight: 600;">Reforma de Interiores</h3>
-                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Transformação de espaços com design funcional e aconchegante.</p>
+                            <h3 style="font-size: 1.25rem; color: #011c3a; margin: 0 0 0.5rem 0; font-weight: 600;">
+                                Design de Interiores com Sofisticação</h3>
+                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Ambientes amplos, elegantes e
+                                integrados à natureza. Projetos residenciais pensados para oferecer bem-estar,
+                                luminosidade e conforto em cada detalhe.</p>
                         </div>
                     </div>
                 </div>
@@ -821,97 +1016,127 @@
         </style>
 
         <!-- Seção de Contato -->
-        <section id="contato" style="width: 100%; padding: 5rem 1rem; background-color: #f9fafb; box-sizing: border-box;">
+        <section id="contato"
+            style="width: 100%; padding: 5rem 1rem; background-color: #f9fafb; box-sizing: border-box;">
             <div style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 1rem; box-sizing: border-box;">
                 <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: flex-start;">
                     <!-- Informações de Contato -->
                     <div style="flex: 1; min-width: 300px;">
-                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin: 0 0 1rem 0; font-family: 'Poppins', sans-serif;">
+                        <h2
+                            style="font-size: 2.5rem; font-weight: 700; color: #011c3a; margin: 0 0 1rem 0; font-family: 'Poppins', sans-serif;">
                             Entre em Contato
                         </h2>
                         <div style="width: 80px; height: 4px; background-color: #C89D23; margin: 0 0 1.5rem 0;"></div>
-                        
+
                         <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">
-                            Tem alguma dúvida ou gostaria de um orçamento? Preencha o formulário ao lado ou entre em contato por um dos canais abaixo.
+                            Tem alguma dúvida ou gostaria de um orçamento? Preencha o formulário ao lado ou entre em
+                            contato por um dos canais abaixo.
                         </p>
 
                         <div style="margin-bottom: 2rem;">
                             <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
-                                <div style="background-color: #011c3a; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0;">
+                                <div
+                                    style="background-color: #011c3a; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0;">
                                     <i class="fas fa-phone-alt" style="color: #ffffff; font-size: 1.1rem;"></i>
                                 </div>
                                 <div>
-                                    <h3 style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">Telefone</h3>
-                                    <a href="https://wa.me/5531994340753" target="_blank" rel="noopener noreferrer" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">(31) 99434-0753</a>
+                                    <h3
+                                        style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">
+                                        Telefone</h3>
+                                    <a href="https://wa.me/5531994340753" target="_blank" rel="noopener noreferrer"
+                                        style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">(31)
+                                        99434-0753</a>
                                 </div>
                             </div>
 
                             <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
-                                <div style="background-color: #011c3a; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0;">
+                                <div
+                                    style="background-color: #011c3a; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0;">
                                     <i class="fas fa-envelope" style="color: #ffffff; font-size: 1.1rem;"></i>
                                 </div>
                                 <div>
-                                    <h3 style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">E-mail</h3>
-                                    <a href="mailto:contato@theesengenharia.com.br" style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">contato@theesengenharia.com.br</a>
+                                    <h3
+                                        style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">
+                                        E-mail</h3>
+                                    <a href="mailto:contato@theesengenharia.com.br"
+                                        style="color: #4b5563; text-decoration: none; transition: color 0.2s ease;">contato@theesengenharia.com.br</a>
                                 </div>
                             </div>
 
                             <div style="display: flex; align-items: flex-start;">
-                                <div style="background-color: #011c3a; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0;">
+                                <div
+                                    style="background-color: #011c3a; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0;">
                                     <i class="fas fa-map-marker-alt" style="color: #ffffff; font-size: 1.1rem;"></i>
                                 </div>
                                 <div>
-                                    <h3 style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">Endereço</h3>
+                                    <h3
+                                        style="font-size: 1.1rem; color: #011c3a; margin: 0 0 0.25rem 0; font-weight: 600;">
+                                        Endereço</h3>
                                     <p style="color: #4b5563; margin: 0;">Belo Horizonte, MG</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; width: 100%;">
+                        <div
+                            style="display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; width: 100%;">
                             <a href="#" class="social-icon" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                            <a href="https://www.instagram.com/theesengenharia/" target="_blank"
+                                rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                            <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Formulário de Contato -->
-                    <div style="flex: 1; min-width: 300px; background-color: white; border-radius: 0.5rem; padding: 2.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-                        <h3 style="font-size: 1.5rem; color: #011c3a; margin: 0 0 1.5rem 0; font-weight: 600;">Envie uma mensagem</h3>
-                        
+                    <div
+                        style="flex: 1; min-width: 300px; background-color: white; border-radius: 0.5rem; padding: 2.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <h3 style="font-size: 1.5rem; color: #011c3a; margin: 0 0 1.5rem 0; font-weight: 600;">Envie uma
+                            mensagem</h3>
+
                         <form id="contactForm" style="display: grid; gap: 1.25rem;">
                             <!-- Email de destino (substitua pelo e-mail que deve receber as mensagens) -->
                             <input type="hidden" id="to_email" name="to_email" value="contato@theesengenharia.com.br">
                             <div>
-                                <label for="name" style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Nome Completo</label>
-                                <input type="text" id="name" name="name" required 
+                                <label for="name"
+                                    style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Nome
+                                    Completo</label>
+                                <input type="text" id="name" name="name" required
                                     style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; font-size: 1rem; transition: border-color 0.2s ease;"
                                     placeholder="Seu nome completo">
                             </div>
 
                             <div>
-                                <label for="email" style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">E-mail</label>
+                                <label for="email"
+                                    style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">E-mail</label>
                                 <input type="email" id="email" name="email" required
                                     style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; font-size: 1rem; transition: border-color 0.2s ease;"
                                     placeholder="seu@email.com">
                             </div>
 
                             <div>
-                                <label for="phone" style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Telefone</label>
+                                <label for="phone"
+                                    style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Telefone</label>
                                 <input type="tel" id="phone" name="phone"
                                     style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; font-size: 1rem; transition: border-color 0.2s ease;"
                                     placeholder="(00) 00000-0000">
                             </div>
 
                             <div>
-                                <label for="subject" style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Assunto</label>
+                                <label for="subject"
+                                    style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Assunto</label>
                                 <select id="subject" name="subject" required
-                                    style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; font-size: 1rem; background-color: white; color: #111827; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1.5em 1.5em;">
+                                    style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; font-size: 1rem; background-color: white; color: #111827; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url("
+                                    data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none'
+                                    viewBox='0 0 20 20' %3E%3Cpath stroke='%236b7280' stroke-linecap='round'
+                                    stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4' /%3E%3C/svg%3E");
+                                    background-repeat: no-repeat; background-position: right 0.75rem center;
+                                    background-size: 1.5em 1.5em;">
                                     <option value="" disabled selected>Selecione um assunto</option>
                                     <option value="orcamento">Solicitar Orçamento</option>
                                     <option value="duvida">Tirar Dúvidas</option>
@@ -921,18 +1146,14 @@
                             </div>
 
                             <div>
-                                <label for="message" style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Mensagem</label>
-                                <textarea 
-                                    id="message" 
-                                    name="message" 
-                                    rows="4" 
-                                    required
+                                <label for="message"
+                                    style="display: block; font-size: 0.95rem; color: #4b5563; margin-bottom: 0.5rem; font-weight: 500;">Mensagem</label>
+                                <textarea id="message" name="message" rows="4" required
                                     style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; font-size: 1rem; font-family: 'Poppins', sans-serif; resize: vertical; min-height: 120px;"
-                                    placeholder="Como podemos ajudar você?"
-                                ></textarea>
+                                    placeholder="Como podemos ajudar você?"></textarea>
                             </div>
 
-                            <button type="submit" 
+                            <button type="submit"
                                 style="background-color: #C89D23; color: white; font-weight: 600; padding: 0.875rem 2rem; border: none; border-radius: 0.375rem; cursor: pointer; font-size: 1rem; transition: background-color 0.2s ease; margin-top: 0.5rem;"
                                 onmouseover="this.style.backgroundColor='#e6b325'"
                                 onmouseout="this.style.backgroundColor='#C89D23'">
@@ -946,63 +1167,108 @@
     </main>
 
     <!-- Rodapé -->
-    <footer style="background-color: #011c3a; color: #ffffff; padding: 4rem 1rem 2rem; font-family: 'Poppins', sans-serif;">
+    <footer
+        style="background-color: #011c3a; color: #ffffff; padding: 4rem 1rem 2rem; font-family: 'Poppins', sans-serif;">
         <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
                 <!-- Coluna 1: Logo e Contato -->
                 <div style="display: flex; flex-direction: column; height: 100%;">
                     <div style="flex-grow: 1; display: flex; flex-direction: column;">
                         <div style="margin-bottom: 1.5rem; padding-right: 1rem;">
-                            <img src="assets/images/logo rodape thees.png" alt="Thees Engenharia" style="max-width: 180px; width: 100%; height: auto; display: block;">
+                            <img src="assets/images/logo rodape thees.png" alt="Thees Engenharia"
+                                style="max-width: 180px; width: 100%; height: auto; display: block;">
                         </div>
                         <div style="margin-top: auto;">
                             <p style="margin: 1.5rem 0 0.5rem; color: #ffffff; font-weight: 500;">Entre em contato:</p>
-                            <p style="margin: 0.25rem 0;"><i class="fas fa-phone-alt" style="margin-right: 0.5rem; color: #C89D23;"></i> <a href="tel:5531994340753" style="color: inherit; text-decoration: none;">(31) 99434-0753</a></p>
-                            <p style="margin: 0.25rem 0 0;"><i class="fas fa-envelope" style="margin-right: 0.5rem; color: #C89D23;"></i> <a href="mailto:contato@theesengenharia.com.br" style="color: inherit; text-decoration: none;">contato@theesengenharia.com.br</a></p>
+                            <p style="margin: 0.25rem 0;"><i class="fas fa-phone-alt"
+                                    style="margin-right: 0.5rem; color: #C89D23;"></i> <a href="tel:5531994340753"
+                                    style="color: inherit; text-decoration: none;">(31) 99434-0753</a></p>
+                            <p style="margin: 0.25rem 0 0;"><i class="fas fa-envelope"
+                                    style="margin-right: 0.5rem; color: #C89D23;"></i> <a
+                                    href="mailto:contato@theesengenharia.com.br"
+                                    style="color: inherit; text-decoration: none;">contato@theesengenharia.com.br</a>
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Coluna 2: Links de Navegação -->
                 <div style="text-align: left;">
-                    <h3 style="color: #ffffff; font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
+                    <h3
+                        style="color: #ffffff; font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
                         Navegação
-                        <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: #C89D23;"></span>
+                        <span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: #C89D23;"></span>
                     </h3>
                     <nav>
-                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-                            <li><a href="#inicio" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
-                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Início</a></li>
-                            <li><a href="#servicos" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
-                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Serviços</a></li>
-                            <li><a href="#sobre" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
-                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Sobre Nós</a></li>
-                            <li><a href="#projetos" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
-                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Projetos</a></li>
-                            <li><a href="#contato" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
-                                <i class="fas fa-chevron-right" style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Contato</a></li>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <li><a href="#inicio"
+                                    style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                    <i class="fas fa-chevron-right"
+                                        style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Início</a>
+                            </li>
+                            <li><a href="#servicos"
+                                    style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                    <i class="fas fa-chevron-right"
+                                        style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i>
+                                    Serviços</a></li>
+                            <li><a href="#sobre"
+                                    style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                    <i class="fas fa-chevron-right"
+                                        style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i> Sobre
+                                    Nós</a></li>
+                            <li><a href="#projetos"
+                                    style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                    <i class="fas fa-chevron-right"
+                                        style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i>
+                                    Projetos</a></li>
+                            <li><a href="#contato"
+                                    style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; display: flex; align-items: center;">
+                                    <i class="fas fa-chevron-right"
+                                        style="margin-right: 0.5rem; font-size: 0.7rem; color: #C89D23;"></i>
+                                    Contato</a></li>
                         </ul>
                     </nav>
                 </div>
 
                 <!-- Coluna 3: Redes Sociais -->
                 <div style="text-align: left;">
-                    <h3 style="color: #ffffff; font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
+                    <h3
+                        style="color: #ffffff; font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
                         Redes Sociais
-                        <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: #C89D23;"></span>
+                        <span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: #C89D23;"></span>
                     </h3>
-                    <p style="color: #9ca3af; font-size: 0.95rem; margin-bottom: 1.5rem;">Siga-nos em nossas redes sociais para ficar por dentro das novidades.</p>
+                    <p style="color: #9ca3af; font-size: 0.95rem; margin-bottom: 1.5rem;">Siga-nos em nossas redes
+                        sociais para ficar por dentro das novidades.</p>
                     <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                        <a href="#" class="social-icon" aria-label="Facebook" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#1877F2'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                        <a href="#" class="social-icon" aria-label="Facebook"
+                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#1877F2'; this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.background='radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                        <a href="https://www.instagram.com/theesengenharia/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="Instagram"
+                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)'; this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#0A66C2'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                        <a href="https://br.linkedin.com/in/fernandathees" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="LinkedIn"
+                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#0A66C2'; this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://wa.me/5531994340753" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#25D366'; this.style.transform='translateY(-3px)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
+                        <a href="https://wa.me/5531994340753" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="WhatsApp"
+                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; transition: all 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#25D366'; this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.1)'; this.style.transform='none'">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -1010,7 +1276,8 @@
             </div>
 
             <!-- Rodapé inferior -->
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+            <div
+                style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
                 <div style="color: #9ca3af; font-size: 0.85rem;">
                     © 2023 Thees Engenharia. Todos os direitos reservados.
                 </div>
@@ -1018,11 +1285,10 @@
                     CNPJ: 46.934.858/0001-24
                 </div>
                 <div style="color: #9ca3af; font-size: 0.85rem;">
-                    Desenvolvido por 
-                    <a href="https://mindflowdigital.com.br" target="_blank" rel="noopener noreferrer" 
-                       style="color: #C89D23; text-decoration: none; font-weight: 500; transition: color 0.2s ease;" 
-                       onmouseover="this.style.color='#ffffff'" 
-                       onmouseout="this.style.color='#C89D23'">
+                    Desenvolvido por
+                    <a href="https://mindflowdigital.com.br" target="_blank" rel="noopener noreferrer"
+                        style="color: #C89D23; text-decoration: none; font-weight: 500; transition: color 0.2s ease;"
+                        onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#C89D23'">
                         Mindflow Digital
                     </a>
                 </div>
@@ -1040,30 +1306,34 @@
             border-radius: 0.375rem;
             margin-bottom: 1rem;
         }
-        
+
         .form-message.error {
             background-color: #FEE2E2;
             color: #991B1B;
             border-color: #FCA5A5;
         }
-        
+
         .form-message.success {
             background-color: #D1FAE5;
             color: #065F46;
             border-color: #6EE7B7;
         }
-        
+
         /* Estilo para campos inválidos */
         .border-red-500 {
             border-color: #EF4444 !important;
         }
-        
+
         /* Estilos para melhorar a experiência do formulário */
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             outline: none;
         }
 
-        input:focus, select:focus, textarea:focus {
+        input:focus,
+        select:focus,
+        textarea:focus {
             border-color: #C89D23 !important;
             box-shadow: 0 0 0 3px rgba(200, 157, 35, 0.1);
         }
@@ -1077,7 +1347,7 @@
             .contact-info {
                 margin-bottom: 3rem;
             }
-            
+
             .contact-form {
                 padding: 1.5rem !important;
             }
@@ -1085,12 +1355,8 @@
     </style>
 
     <!-- Botão Flutuante do WhatsApp -->
-    <a 
-       href="https://wa.me/5531994340753" 
-       target="_blank"
-       rel="noopener noreferrer"
-       class="whatsapp-float" 
-       aria-label="Fale conosco pelo WhatsApp">
+    <a href="https://wa.me/5531994340753" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
+        aria-label="Fale conosco pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1130,9 +1396,11 @@
             0% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
             }
+
             70% {
                 box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
             }
+
             100% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
@@ -1151,16 +1419,16 @@
 
     <script>
         // Script para o acordeão
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const accordionHeaders = document.querySelectorAll('.accordion-header');
-            
+
             accordionHeaders.forEach(header => {
-                header.addEventListener('click', function() {
+                header.addEventListener('click', function () {
                     const accordionItem = this.parentElement;
                     const accordionContent = this.nextElementSibling;
                     const isOpen = accordionItem.classList.contains('active');
                     const icon = this.querySelector('.accordion-icon');
-                    
+
                     // Fecha todos os itens do acordeão
                     document.querySelectorAll('.accordion-item').forEach(item => {
                         item.classList.remove('active');
@@ -1169,7 +1437,7 @@
                         const itemIcon = item.querySelector('.accordion-icon');
                         if (itemIcon) itemIcon.style.transform = 'rotate(0deg)';
                     });
-                    
+
                     // Abre o item clicado se não estiver aberto
                     if (!isOpen) {
                         accordionItem.classList.add('active');
@@ -1178,7 +1446,7 @@
                     }
                 });
             });
-            
+
             // Abre o primeiro item por padrão
             if (accordionHeaders.length > 0) {
                 accordionHeaders[0].click();
@@ -1186,12 +1454,12 @@
         });
     </script>
 
-    
-    
+
+
     <!-- Scripts -->
     <script>
         // Array com as palavras a serem alternadas
-        const words = ['BIM 3D', 'QUALIDADE', 'EFICIÊNCIA', 'PRAZO'];
+        const words = ['QUALIDADE', 'EFICIÊNCIA', 'SATISFAÇÃO'];
         let currentWord = 0;
         const dynamicText = document.getElementById('dynamic-text');
 
@@ -1203,15 +1471,15 @@
             // Esconde a palavra atual
             dynamicText.style.opacity = '0';
             dynamicText.style.transform = 'translateY(20px)';
-            
+
             // Atualiza a palavra
             setTimeout(() => {
                 currentWord = (currentWord + 1) % words.length;
                 const newWord = words[currentWord];
                 dynamicText.textContent = newWord;
-                
 
-                
+
+
                 // Mostra a nova palavra
                 dynamicText.style.opacity = '1';
                 dynamicText.style.transform = 'translateY(0)';
@@ -1221,18 +1489,61 @@
         // Inicia a animação
         setInterval(changeText, 3000);
     </script>
-    
-    
+
+
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
-    
+
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         // Inicialização do EmailJS
-        (function() {
+        (function () {
             emailjs.init('Igh7EOExtjg07j7Qi');
         })();
     </script>
+
+    <script type="text/javascript">
+        // Marquee infinito suave para logos de parceiros
+        function initPartnersMarquee() {
+            const track = document.getElementById('partnersTrack');
+            if (!track) return;
+
+            // Duplicar os logos para criar loop infinito
+            const originalLogos = track.innerHTML;
+            track.innerHTML = originalLogos + originalLogos + originalLogos;
+
+            let position = 0;
+            const speed = window.innerWidth <= 768 ? 2 : 1; // Mais rápido em mobile
+            let isPaused = false;
+
+            function animate() {
+                if (!isPaused) {
+                    position -= speed;
+
+                    // Reset quando completar um ciclo
+                    const trackWidth = track.scrollWidth / 3;
+                    if (Math.abs(position) >= trackWidth) {
+                        position = 0;
+                    }
+
+                    track.style.transform = `translateX(${position}px)`;
+                }
+                requestAnimationFrame(animate);
+            }
+
+            // Pausar no hover
+            track.addEventListener('mouseenter', () => isPaused = true);
+            track.addEventListener('mouseleave', () => isPaused = false);
+
+            // Iniciar animação
+            animate();
+        }
+
+        // Inicializar quando a página carregar
+        document.addEventListener('DOMContentLoaded', initPartnersMarquee);
+        window.addEventListener('resize', initPartnersMarquee);
+    </script>
 </body>
+
 </html>
