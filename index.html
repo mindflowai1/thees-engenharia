@@ -48,7 +48,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Tailwind CSS -->
-    <link href="assets/css/styles.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="assets/css/styles.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="assets/css/styles.css">
     </noscript>
@@ -587,20 +587,31 @@
                 <div
                     style="color: white; position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box;">
                     <!-- Título centralizado -->
-                    <div style="width: 100%; text-align: center;">
+                    <div style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;">
                         <h1
-                            style="font-size: 2.5rem; font-weight: 700; margin: 0 auto 1rem; text-transform: uppercase; letter-spacing: 2px;">
+                            style="font-size: 2.5rem; font-weight: 700; margin: 0 auto 1rem; text-transform: uppercase; letter-spacing: 2px; text-align: center; width: 100%;">
                             ESPECIALISTAS EM
-
                         </h1>
                         <div id="dynamic-text"
                             style="font-size: 6rem; font-weight: 700; margin: 0 auto; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease-in-out; text-align: center; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                            QUALIDADE
+                            BIM 3D
                         </div>
                         <style>
+                            /* Estilos para o título 'ESPECIALISTAS EM' */
+                            h1 {
+                                text-align: center !important;
+                                width: 100% !important;
+                                padding: 0 1rem !important;
+                                box-sizing: border-box !important;
+                            }
+
                             @media (max-width: 768px) {
                                 #dynamic-text {
                                     font-size: 4rem !important;
+                                }
+                                h1 {
+                                    font-size: 2.2rem !important;
+                                    padding: 0 0.5rem !important;
                                 }
                             }
 
@@ -608,6 +619,12 @@
                                 #dynamic-text {
                                     font-size: 3rem !important;
                                     letter-spacing: 1px !important;
+                                }
+                                h1 {
+                                    font-size: 1.8rem !important;
+                                    letter-spacing: 1px !important;
+                                    padding: 0 0.5rem !important;
+                                    margin: 0 auto 0.5rem !important;
                                 }
                             }
                         </style>
@@ -840,35 +857,92 @@
             </div>
         </section>
 
+
         <!-- Seção de Parceiros -->
-        <section
-            style="width: 100%; padding: 3rem 0; background-color: #011c3a; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; overflow: hidden;">
-
-
-            <!-- Container da animação - largura total -->
-            <div class="partners-slider" style="width: 100%; overflow: hidden; position: relative;">
-                <div class="partners-track" id="partnersTrack"
-                    style="display: flex; gap: 15rem; align-items: center; will-change: transform;">
-                    <!-- Logos originais -->
-                    <div class="partner-logo"
-                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
-                        <img src="assets/images/logos/1.png" alt="Parceiro 1"
-                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+        <section style="width: 100%; padding: 3rem 0; background-color: #fafafa; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; overflow: hidden;">
+            <style>
+                .logo-slider-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .logo-slider-track {
+                    display: flex;
+                    width: max-content;
+                    animation: scroll 40s linear infinite;
+                    padding: 20px 0;
+                }
+                .logo-slider-track:hover {
+                    animation-play-state: paused;
+                }
+                .logo-slide {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 2rem;
+                }
+                .logo-slide img {
+                    max-width: 150px;
+                    height: auto;
+                    opacity: 0.8;
+                    transition: all 0.3s ease;
+                }
+                .logo-slide img:hover {
+                    opacity: 1;
+                    transform: scale(1.05);
+                }
+                @keyframes scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(calc(-250px * 6)); }
+                }
+                
+                /* Ajuste para garantir que todas as 6 imagens sejam exibidas */
+                @media (max-width: 1200px) {
+                    .logo-slide {
+                        padding: 0 1rem;
+                    }
+                }
+            </style>
+            <div class="logo-slider-container">
+                <div class="logo-slider-track">
+                    <!-- Primeira cópia dos logos -->
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/1.png" alt="Logo 1">
                     </div>
-                    <div class="partner-logo"
-                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
-                        <img src="assets/images/logos/2.png" alt="Parceiro 2"
-                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/2.png" alt="Logo 2">
                     </div>
-                    <div class="partner-logo"
-                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
-                        <img src="assets/images/logos/3.png" alt="Parceiro 3"
-                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/3.png" alt="Logo 3">
                     </div>
-                    <div class="partner-logo"
-                        style="flex-shrink: 0; width: 250px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: all 0.3s ease;">
-                        <img src="assets/images/logos/4.png" alt="Parceiro 4"
-                            style="height: 100%; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/4.png" alt="Logo 4">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/5.png" alt="Logo 5">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/6.png" alt="Logo 6">
+                    </div>
+                    <!-- Segunda cópia dos mesmos logos para criar o efeito contínuo -->
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/1.png" alt="Logo 1">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/2.png" alt="Logo 2">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/3.png" alt="Logo 3">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/4.png" alt="Logo 4">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/5.png" alt="Logo 5">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/images/logos/6.png" alt="Logo 6">
                     </div>
                 </div>
             </div>
@@ -1443,13 +1517,20 @@
     <!-- Scripts -->
     <script>
         // Array com as palavras a serem alternadas
-        const words = ['QUALIDADE', 'EFICIÊNCIA', 'SATISFAÇÃO'];
+        const words = ['BIM 3D', 'QUALIDADE', 'INOVAÇÃO'];
         let currentWord = 0;
         const dynamicText = document.getElementById('dynamic-text');
+
+        // Função para possíveis ajustes de tamanho de fonte específicos por palavra
+        function updateFontSize(word) {
+            // Nenhum ajuste específico necessário no momento
+            // Mantida para compatibilidade com o código existente
+        }
 
         // Mostra a primeira palavra imediatamente
         dynamicText.style.opacity = '1';
         dynamicText.style.transform = 'translateY(0)';
+        updateFontSize(words[0]);
 
         function changeText() {
             // Esconde a palavra atual
@@ -1461,14 +1542,20 @@
                 currentWord = (currentWord + 1) % words.length;
                 const newWord = words[currentWord];
                 dynamicText.textContent = newWord;
-
-
+                
+                // Ajusta o tamanho da fonte para a nova palavra
+                updateFontSize(newWord);
 
                 // Mostra a nova palavra
                 dynamicText.style.opacity = '1';
                 dynamicText.style.transform = 'translateY(0)';
             }, 500);
         }
+
+        // Atualiza o tamanho da fonte quando a janela for redimensionada
+        window.addEventListener('resize', () => {
+            updateFontSize(words[currentWord]);
+        });
 
         // Inicia a animação
         setInterval(changeText, 3000);
@@ -1487,44 +1574,9 @@
         })();
     </script>
 
-    <script type="text/javascript">
-        // Marquee infinito suave para logos de parceiros
-        function initPartnersMarquee() {
-            const track = document.getElementById('partnersTrack');
-            if (!track) return;
 
-            // Duplicar os logos para criar loop infinito
-            const originalLogos = track.innerHTML;
-            track.innerHTML = originalLogos + originalLogos + originalLogos;
-
-            let position = 0;
-            const speed = window.innerWidth <= 768 ? 2 : 1; // Mais rápido em mobile
-            let isPaused = false;
-
-            function animate() {
-                if (!isPaused) {
-                    position -= speed;
-
-                    // Reset quando completar um ciclo
-                    const trackWidth = track.scrollWidth / 3;
-                    if (Math.abs(position) >= trackWidth) {
-                        position = 0;
-                    }
-
-                    track.style.transform = `translateX(${position}px)`;
-                }
-                requestAnimationFrame(animate);
-            }
-
-            // Removido efeito hover - animação contínua
-
-            // Iniciar animação
-            animate();
         }
 
-        // Inicializar quando a página carregar
-        document.addEventListener('DOMContentLoaded', initPartnersMarquee);
-        window.addEventListener('resize', initPartnersMarquee);
     </script>
 </body>
 
